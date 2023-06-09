@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>書籍推薦</title>
+    </head>
+    <body>
+        <div>
+            書籍推薦區<br>
+            請完整填寫表格後按下送出審核按鈕<br>
+            審核完成將於最新消息公告更新書單
+        </div>
+        <div id="recommend area">
+            <form action="recommend.php" method="post">
+                書籍名稱: <input type="text" name="book_name" value=""><br>
+                書籍作者: <input type="text" name="author" value=""><br>
+                ISBN: <input type="text" name="ISBN" value=""><br>
+                書籍譯者: <input type="text" name="translator" value=""><br>
+                書籍語言: <input type="text" name="language" value=""><br>
+                書籍科目: <input type="text" name="subject_handling" value=""><br>
+                版次: <input type="text" name="edition" value=""><br>
+                出版日期: <input type="text" name="publish_date" value=""><br>
+                出版商: <input type="text" name="publisher" value=""><br>
+                推薦理由<br>
+                <textarea name="recommed_reason"></textarea><br>
+                <input type="submit" name="button" value="送出審核">
+             </form>
+        </div>
+    </body>
+</html>
