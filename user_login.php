@@ -1,23 +1,6 @@
 <?php
 
-// ******** update your personal settings ******** 
-$servername = "localhost";
-$username = "root";
-$password = "40947018S";
-$dbname = "lib_proj";
-
-// Connecting to and selecting a MySQL database
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-if (!$conn->set_charset("utf8")) {
-    printf("Error loading character set utf8: %s\n", $conn->error);
-    exit();
-}
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-} 
+$conn=require_once "config.php";
 
 if (isset($_POST['account_name']) && isset($_POST['password'])) {
 	$libraryID = $_POST['account_name'];
@@ -25,23 +8,33 @@ if (isset($_POST['account_name']) && isset($_POST['password'])) {
 
 	$sql = "SELECT *
             from READER
-            where $libraryID = libraryID";
+            where libraryID = '$libraryID'";
 	
     $result = $conn->query($sql);
-	if ($result === TRUE) {
+	if ($result) {
         $row = mysqli_fetch_array ( $result, MYSQLI_ASSOC );
-        if($password === $row['password']){
+        if($password == $row['password']){
+            session_start();
+            // Store data in session variables
+            $_SESSION["loggedin"] = true;
+            //這些是之後可以用到的變數
+            $_SESSION["username"] = $row["libraryID"];
+
             // 跳到成功頁面
+            header("location:user_login_success.html");
         }
         else{
             // 跳到失敗頁面
+            header("location:user_login_failed.html");
         }
 	} else {
 		// 跳到失敗頁面
+        header("location:user_login_failed.html");
 	}
 
 }else{
 	// 跳到失敗頁面
+    header("location:user_login_failed.html");
 }
 				
 ?>
