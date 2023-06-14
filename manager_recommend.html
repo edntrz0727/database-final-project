@@ -1,13 +1,34 @@
 <html>
     <head>
         <title>館員推薦清單</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                text-decoration: none;
+                box-sizing: border-box;
+            }
+            
+        body{
+            width: 100%;
+            height: 100%;
+            background-color: antiquewhite;
+        }
+        tr,th{
+           padding-top: 2%;
+        }
+        </style>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     </head>
     <body>
+        <div id="banner" class="banner" style="background-color:brown;">
+			<p style="color: white; font-size: large;font-weight: bolder;margin-left: 5%;">三校資工圖書系統
+		</div>
         <div id="manager recommend">
-            <p>查看書單</p>
-            <form action="" method="get">
-                <table>
+            <p style="margin-top: 2%;font-size: large;font-weight: bold;color: brown;text-align: center;">查看書單</p>
+            <form action="" method="get" style="margin-top: 1%;">
+                <table style="margin-left: 35%;">
                     <tr>
                         <th>書名</th>
                         <th>作者</th>
@@ -21,7 +42,9 @@
                         </th>
                     </tr>
                 </table>
-                <input type="button" value="新增書籍" onclick="javascript:location.href='new_manager_recommend.html'"/>
+                <div class="btn" style="text-align: center;margin-top: 2%;">
+                    <input type="button" value="新增書籍" onclick="javascript:location.href='new_manager_recommend.html'" style=" background-color: antiquewhite;color: brown;border: none;"/>
+                </div>
             </form>
         </div>
     </body>

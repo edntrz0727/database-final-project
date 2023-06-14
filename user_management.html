@@ -1,10 +1,36 @@
 <html>
     <head>
         <title>讀者管理</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                text-decoration: none;
+                box-sizing: border-box;
+            }
+            
+        body{
+            width: 100%;
+            height: 100%;
+            background-color: antiquewhite;
+        }
+        .options{
+            margin-top: 2%;
+            border-color: brown;
+        }
+        tr,th{
+            padding-top:  5%;
+        }
+        </style>
     </head>
     <body>
+        <div id="banner" class="banner" style="background-color:brown;">
+			<p style="color: white; font-size: large;font-weight: bolder;margin-left: 5%;">三校資工圖書系統
+		</div>
+        <p style="color: brown;font-weight: bold;margin-top: 2%;font-size: large;text-align: center;">讀者管理</p>
         <form>
-            <table>
+            <table style="margin-top: 1%;margin-left: 42%;">
                 <tr>
                     <th>讀者ID</th>
                     <th>借閱書量</th>
@@ -68,7 +94,9 @@
                     </th>
                 </tr>
             </table>
-            <input type="button" value="新增讀者" onclick="javascript:location.href='new_user.html'">
+            <div class="btns" style="text-align: center;margin-top: 2%;">
+                <input type="button" value="新增讀者" onclick="javascript:location.href='new_user.html'" style=" background-color: antiquewhite;color: brown;border: none;"/>
+            </div>
         </form>
     </body>
 </html>

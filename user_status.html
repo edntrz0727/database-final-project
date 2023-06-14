@@ -1,11 +1,37 @@
 <html>
     <head>
         <title>讀者狀態</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                text-decoration: none;
+                box-sizing: border-box;
+            }
+            
+        body{
+            width: 100%;
+            height: 100%;
+            background-color: antiquewhite;
+        }
+        .options{
+            margin-top: 2%;
+            border-color: brown;
+        }
+        tr,th{
+            padding-top:  5%;
+        }
+        </style>
     </head>
     <body>
+        <div id="banner" class="banner" style="background-color:brown;">
+			<p style="color: white; font-size: large;font-weight: bolder;margin-left: 5%;">三校資工圖書系統
+		</div>
+        <p style="color: brown;font-weight: bold;margin-top: 2%;font-size: large;text-align: center;">讀者閱讀狀態</p>
         <div id="reading status">
             <form action="" method="get">
-                <table>
+                <table style="margin-top: 1%;margin-left: 40%;">
                     <tr>
                         <th>書籍名稱</th>
                         <th>借閱狀態</th>
@@ -23,7 +49,7 @@
         </div>
         <div id="penalty status">
             <form action="" method="get">
-                <table>
+                <table  style="margin-top: 1%;margin-left: 40%;">
                     <tr>
                         <th>罰款金額</th>
                         <th>罰款日期</th>
