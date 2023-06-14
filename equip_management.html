@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>設施管理</title>
+    </head>
+    <body>
+        <p>設施管理</p>
+        <div id="equip_management">
+            <form action="" method="get">
+                <table>
+                    <tr>
+                        <th>設施ID</th>
+                        <th>設施狀態</th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <a href="equip_info.html">001</a>
+                        </th>
+                        <th>
+                            <select name="equip_status">
+                                <option value="free" selected>空閒</option>
+                                <option value="using">使用中</option>
+                                <option value="reserved">已預約</option>
+                                <option value="maintain">維修中</option>
+                            </select>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <a href="equip_info.html">002</a>
+                        </th>
+                        <th>
+                            <select name="equip_status">
+                                <option value="free" selected>空閒</option>
+                                <option value="using">使用中</option>
+                                <option value="reserved">已預約</option>
+                                <option value="maintain">維修中</option>
+                            </select>
+                        </th>
+                    </tr>
+                </table>
+                <input type="button" value="新增設施" onclick="javascript:location.href='new_equip.html'"/>
+            </form>
+        </div>
+    </body>
+</html>

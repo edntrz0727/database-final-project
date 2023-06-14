@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>館藏流通狀態</title>
+    </head>
+    <body>
+        <form action="" method="get">
+            <table>
+                <tr>
+                    <th>館藏名稱</th>
+                    <th>館藏狀態</th>
+                </tr>
+                <tr>
+                    <th>Database System Concepts - 7th edition</th>
+                    <th>
+                        <select name="status">
+                            <option value="free" selected>閒置</option>
+                            <option value="borrowed">借閱中</option>
+                            <option value="overdue">逾期</option>
+                        </select>
+                    </th>
+                </tr>
+                <tr>
+                    <th>Operating System Concepts - 10th edition</th>
+                    <th>
+                        <select name="status">
+                            <option value="free">閒置</option>
+                            <option value="borrowed" selected>借閱中</option>
+                            <option value="overdue">逾期</option>
+                        </select>
+                    </th>
+                </tr>
+                <tr>
+                    <th>Linear Algebra with Applications - 6th edition</th>
+                    <th>
+                        <select name="status">
+                            <option value="free">閒置</option>
+                            <option value="borrowed">借閱中</option>
+                            <option value="overdue" selected>逾期</option>
+                        </select>
+                    </th>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>

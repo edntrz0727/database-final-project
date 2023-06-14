@@ -3,6 +3,72 @@
         <title>讀者管理</title>
     </head>
     <body>
-        <p>先擺著</p>
+        <form>
+            <table>
+                <tr>
+                    <th>讀者ID</th>
+                    <th>借閱書量</th>
+                    <th>推薦順位</th>
+                </tr>
+                <tr>
+                    <th>
+                        <a href="user_status.html">001</a>
+                    </th>
+                    <th>
+                        <select name="borrow">
+                            <option value="increase">增加</option>
+                            <option value="none" selected>不變</option>
+                            <option value="decrease">減少</option>
+                        </select>
+                    </th>
+                    <th>
+                        <select name="order">
+                            <option value="up">上升</option>
+                            <option value="none" selected>不變</option>
+                            <option value="down">下降</option>
+                        </select>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <a href="user_status.html">002</a>
+                    </th>
+                    <th>
+                        <select name="borrow">
+                            <option value="increase">增加</option>
+                            <option value="none" selected>不變</option>
+                            <option value="decrease">減少</option>
+                        </select>
+                    </th>
+                    <th>
+                        <select name="order">
+                            <option value="up">上升</option>
+                            <option value="none" selected>不變</option>
+                            <option value="down">下降</option>
+                        </select>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <a href="user_status.html">003</a>
+                    </th>
+                    <th>
+                        <select name="borrow">
+                            <option value="increase">增加</option>
+                            <option value="none" selected>不變</option>
+                            <option value="decrease">減少</option>
+                        </select>
+                    </th>
+                    <th>
+                        <select name="order">
+                            <option value="up">上升</option>
+                            <option value="none" selected>不變</option>
+                            <option value="down">下降</option>
+                        </select>
+                    </th>
+                </tr>
+            </table>
+            <input type="button" value="新增讀者" onclick="javascript:location.href='new_user.html'">
+        </form>
     </body>
 </html>
