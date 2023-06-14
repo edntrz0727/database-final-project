@@ -30,19 +30,22 @@
                             from BOOK 
                             where ISBN = $ISBN";	// set up your sql query
                     $result = $conn->query($sql);	// Send SQL Query
-                    $row = mysqli_fetch_array ( $result, MYSQLI_ASSOC );
-                    $title = $row['title'];
-                    $writer = $row['writer'];
-                    $translator = $row['translator'];
-                    $edition = $row['edition'];
-                    $subjecthead = $row['subjecthead'];
-                    $language = $row['language'];
-                    $company = $row['company'];
-                    $publishDate = $row['publishDate'];
-                    $state = $row['state'];
-
-
-
+                    if($result){
+                        $row = mysqli_fetch_array ( $result, MYSQLI_ASSOC );
+                        $title = $row['title'];
+                        $writer = $row['writer'];
+                        $translator = $row['translator'];
+                        $edition = $row['edition'];
+                        $subjecthead = $row['subjecthead'];
+                        $language = $row['language'];
+                        $company = $row['company'];
+                        $publishDate = $row['publishDate'];
+                        $state = $row['state'];
+                    }
+                    else{
+                        echo "查無資料!";
+                    }
+                    
                 ?>
                     <tr>
                         <td>書籍名稱</td>
