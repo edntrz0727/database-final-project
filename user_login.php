@@ -18,7 +18,7 @@ if (isset($_POST['account_name']) && isset($_POST['password'])) {
             // Store data in session variables
             $_SESSION["loggedin"] = true;
             //這些是之後可以用到的變數
-            $_SESSION["username"] = $row["libraryID"];
+            $_SESSION["libraryID"] = $row["libraryID"];
 
             // 跳到成功頁面
             header("location:user_login_success.html");
