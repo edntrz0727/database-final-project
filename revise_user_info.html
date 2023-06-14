@@ -3,7 +3,7 @@
         <title>修改個人資料</title>
     </head>
     <body>
-        <form action="revise_user_info.php" method="get">
+        <form action="" method="get">
             <table>
                 <tr>
                     <th>姓名</th>
@@ -20,7 +20,7 @@
             </table>
         </form>
         <!--上面用get，因為這三個通常是不會改動到的東西-->
-        <form action="revise_user_info.php" method="post">
+        <form action="" method="post">
             <table>
                 <tr>
                     <th>生日</th>
@@ -39,7 +39,7 @@
                     <td><input type="text" name="email"/></td>
                 </tr>
             </table>
-            <input type="submit" value="修改資料" onclick="javascript:location.href='user_info.html'"/>
+            <input type="button" value="修改資料" onclick="javascript:location.href='user_info.html'"/>
             <input type="reset" value="清除資料"/>
             <input type="button" value="取消修改" onclick="javascript:location.href='user_info.html'"/>
         </form>
