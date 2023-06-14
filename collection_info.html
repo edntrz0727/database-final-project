@@ -1,67 +1,89 @@
 <html>
     <head>
         <title>館藏資訊</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                text-decoration: none;
+                box-sizing: border-box;
+            }
+            
+        body{
+            width: 100%;
+            height: 100%;
+            background-color: antiquewhite;
+        }
+        tr,th{
+           padding-top: 2%;
+        }
+        </style>
     </head>
     <body>
-        <div id="collection info">
+        <div id="banner" class="banner" style="background-color:brown;">
+			<p style="color: white; font-size: large;font-weight: bolder;margin-left: 5%;">三校資工圖書系統
+		</div>
+        <div id="collection info" style="margin-top: 2%;text-align: center;">
+            <p style="font-size: large;font-weight: bold;color: brown;">館藏資訊</p>
             <form action="collection_info.php" method="get">
-                <table>
+                <table style="margin-left: 40%;margin-top: 1%;">
                     <tr>
-                        <td>書籍名稱</td>
-                        <td></td><!--echo db裡面的name-->
+                        <th>書籍名稱</th>
+                        <th></th><!--echo db裡面的name-->
                     </tr>
                     <tr>
-                        <td>ISBN</td>
-                        <td></td><!--echo ISBN-->
+                        <th>ISBN</th>
+                        <th></th><!--echo ISBN-->
                     </tr>
                     <tr>
-                        <td>書籍作者</td>
-                        <td></td><!--echo author-->
+                        <th>書籍作者</th>
+                        <th></th><!--echo author-->
                     </tr>
                     <tr>
-                        <td>書籍譯者</td>
-                        <td></td>
+                        <th>書籍譯者</th>
+                        <th></th>
                     </tr>
                     <tr>
-                        <td>版次</td>
-                        <td></td>
+                        <th>版次</th>
+                        <th></th>
                     </tr>
                     <tr>
-                        <td>相關科目</td>
-                        <td></td>
+                        <th>相關科目</th>
+                        <th></th>
                     </tr>
                     <tr>
-                        <td>書籍語言</td>
-                        <td></td>
+                        <th>書籍語言</th>
+                        <th></th>
                     </tr>
                     <tr>
-                        <td>出版商</td>
-                        <td></td>
+                        <th>出版商</th>
+                        <th></th>
                     </tr>
                     <tr>
-                        <td>出版日期</td>
-                        <td></td>
+                        <th>出版日期</th>
+                        <th></th>
                     </tr>
                 </table>
             </form>
         </div>
         <div id="collection reservation">
             <form action="collection_info.php" method="get">
-                <table>
+                <table style="margin-left: 40%;margin-top: 5%;">
                     <tr>
-                        <td>書籍狀態</td>
-                        <td>能否預約</td>
+                        <th>書籍狀態</th>
+                        <th>能否預約</th>
                     </tr>
                     <tr>
-                        <td></td><!--book state-->
-                        <td></td><!--reservation-->
+                        <th></th><!--book state-->
+                        <th></th><!--reservation-->
                     </tr>
                 </table>
             </form>
         </div>
-        <div>
+        <div class="reseve" style="text-align: center;margin-top: 1%;">
             <form action="" method="post"><!--送出預約-->
-                <input type="submit" value="預約" />
+                <input type="button" value="預約" style="background-color: antiquewhite;color: brown;border: none;" onclick="javascript:location.href='#'"/>
             </form>
         </div>
     </body>

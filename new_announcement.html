@@ -1,11 +1,33 @@
 <html>
     <head>
         <title>新增公告</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                text-decoration: none;
+                box-sizing: border-box;
+            }
+            
+        body{
+            width: 100%;
+            height: 100%;
+            background-color: antiquewhite;
+        }
+        tr,th{
+           padding-top: 2%;
+        }
+        </style>
     </head>
     <body>
-        <div id="new_announcement">
-            <form action="" method="post">
-                <table>
+        <div id="banner" class="banner" style="background-color:brown;">
+			<p style="color: white; font-size: large;font-weight: bolder;margin-left: 5%;">三校資工圖書系統
+		</div>
+        <div class="new_announcement">
+            <form action="" method="post" style="text-align: center; margin-top: 2%;">
+                <p style="font-size: large;font-weight: bold;color: brown;">新增公告</p>
+                <table style="margin-left: 40%;margin-top: 1%;">
                     <tr>
                         <th>公告日期</th>
                         <th>
@@ -15,11 +37,11 @@
                     <tr>
                         <th>公告內容</th>
                         <th>
-                            <textarea id="announcement_info"></textarea>
+                            <textarea id="announcement_info" style="width: 200%;height: 200px;"></textarea>
                         </th>
                     </tr>
                 </table>
-                <input type="button" value="新增公告" onclick="javascript:location.href='announcement.html'"/>
+                <input type="button" value="新增公告" onclick="javascript:location.href='announcement.html'" style="margin-top: 2%;border: none;background-color: antiquewhite;color: brown;"/>
             </form>
         </div>
     </body>

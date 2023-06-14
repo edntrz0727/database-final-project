@@ -1,13 +1,34 @@
 <html>
     <head>
         <title>設施資訊</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                text-decoration: none;
+                box-sizing: border-box;
+            }
+            
+        body{
+            width: 100%;
+            height: 100%;
+            background-color: antiquewhite;
+        }
+        tr,th{
+           padding-top: 2%;
+        }
+        </style>
     </head>
     <body>
-        <p>設施資訊</p>
-        <input type="button" value="返回設施清單" onclick="javascript:location.href='equip_management.html'"/>
+        <div id="banner" class="banner" style="background-color:brown;">
+			<p style="color: white; font-size: large;font-weight: bolder;margin-left: 5%;">三校資工圖書系統
+		</div>
+        <p style="margin-top: 2%;font-size: large;font-weight: bold;color: brown;text-align: center;">設施資訊</p>
+        <input type="button" value="返回設施清單" onclick="javascript:location.href='equip_management.html'" style="background-color: antiquewhite;color: brown;border: none;margin-left: 20%;margin-top: 1%;"/>
         <div id="equip info">
             <form action="" method="get">
-                <table>
+                <table style="margin-top: 1%; margin-left: 40%;">
                     <tr>
                         <th>設施名稱：</th>
                         <th></th>
@@ -21,8 +42,10 @@
                         <th></th>
                     </tr>
                 </table>
-                <input type="button" value="修改設施資訊" onclick="javascript:location.href='revise_equip.html'"/>
-                <input type="button" value="刪除設施" onclick="javascript:location.href='equip_management.html'"/>
+                <div class="btns" style="text-align: center;margin-top: 2%;">
+                    <input type="button" value="修改設施資訊" onclick="javascript:location.href='revise_equip.html'" style=" background-color: antiquewhite;color: brown;border: none;"/>
+                    <input type="button" value="刪除設施" onclick="javascript:location.href='equip_management.html'" style="background-color: antiquewhite;color:brown; border: none;margin-left: 5%;"/>
+                </div>
             </form>
         </div>
     </body>
