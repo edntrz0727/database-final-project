@@ -3,44 +3,86 @@
 	<title>三校資工領域圖書整合系統</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<script src="https://kit.fontawesome.com/998bef7baf.js" crossorigin="anonymous"></script>
-
+	<style>
+* {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                text-decoration: none;
+                box-sizing: border-box;
+            }
+		body{
+			background-color: antiquewhite;
+			width: 100%;
+			height: 100%;
+		}
+		form.page{
+			width: 100%;
+			height: 100%;
+			background-color: antiquewhite;
+		}
+		.login{
+			width: 100%;
+			height: 5%;
+			background-color: brown;
+		}
+		.option_btn{
+            background-color: rgb(255, 253, 250);
+            color: brown;
+            border-style: none;
+            margin-top: 5%;
+            width: 80%;
+            margin-left: 10%;
+            height: 5%;
+        }
+		.sidebar{
+			width: 30%;
+			float: left;
+		}
+		.announcement{
+			width: 70%;
+			float: right;
+			text-align: center;
+		}
+		tr,th{
+			padding-top: 2%;
+			padding-left: 100px;
+		}
+	</style>
 </head>
 <body>
-	<div id="login">
-		<li>
-			<a href="user_login.html">會員登入</a>
-		</li>
+	<form class="page">
+		<div id="banner" class="banner" style="background-color:brown;">
+			<p style="color: white; font-size: large;font-weight: bolder;margin-left: 5%;">三校資工圖書系統
+			<a href="user_login.html" style="font-size:medium;margin-left: 80%; color:white;font-weight: normal;">登入</a>
+		</div>
+
+	<div class="search" style="text-align: center; margin-top: 5%;height: 5%">
+		<input type="text" name="search" id="search" placeholder="輸入尋找書籍" style="width: 40%;border: none;height: 100%;">
+		<button class="search" style="background-color: antiquewhite;border-color: brown;border: none;margin-left: 2%;"><i class="fas fa-search"></i></button>
 	</div>
 
-	<div id="search">
-		<input type="text" name="search" id="search" placeholder="輸入尋找書籍">
-		<button class="search"><i class="fas fa-search"></i></button>
+	<div class="advanced search" style="text-align: center;margin-top: 1%;">
+		<a href="adv_research.html" >進階搜尋選項</a>
 	</div>
-
-	<div id="advanced search">
-		<a href="adv_research.html">進階搜尋選項</a>
+	
+	<div class="sidebar" style="margin-top: 2%;">
+		<p style="color: brown;text-align: center;font-size: large;margin-top: 2%;font-weight: bold;">其他功能</p>
+			<input type="button" class="option_btn" value="設施預約" onclick="javascript:location.href='equip_reserve.html'"/>
+			<input type="button" class="option_btn" value="書籍推薦" onclick="javascript:location.href='recommend.html'"/>
 	</div>
-
-	<div id="news">
+	<div class="announcement" style="margin-top: 2%;">
 		<form action="" method="get">	
-			<h3>最新消息</h3>
-			<table width="500" align="center"><!--css之後再說-->
+			<p style="color: brown;text-align: center;font-size: large;margin-top: 2%;font-weight: bold;">最新消息</p>
+			<table><!--css之後再說-->
 				<tr>
-					<td>發布時間</td>
-					<td>內容</td>
+					<th>發布時間</th>
+					<th>公告內容</th>
 				</tr>
 			</table>
 		</form>
 	</div>
-	
-	<div id="sidebar">
-		<h3>其他功能</h2>
-		<ul>
-			<li><a href="equip_reserve.html">設施預約</a></li>
-			<li><a href="recommend.html">書籍推薦</a></li>
-		</ul>
-	</div>
-
+</form>
 </body>
 	
 </html>

@@ -2,31 +2,50 @@
 <head>
 	<title>三校資工領域圖書整合系統</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <style>
+       * {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                text-decoration: none;
+                box-sizing: border-box;
+            }
+        body{
+            width: 100%;
+            height: 100%;
+        }
+        form.page{
+            width: 100%;
+            height: 100%;
+            background-color: antiquewhite;
+        }
+        .option_btn{
+            background-color: rgb(255, 253, 250);
+            color: brown;
+            border-style: none;
+            margin-top: 5%;
+            width: 80%;
+            margin-left: 10%;
+            height: 5%;
+        }
+    </style>
 </head>
     <body>
-        <div id="manager_login">
-            <a href="manager_login.html">登入</a>
-        </div>
-        <div id="collection info">
-            <a href="collection_info_manage.html">查看/修改館藏資訊</a>
-        </div>
-        <div id="collection management">
-            <a href="collection_management.html">管理館藏流通狀態</a>
-        </div>
-        <div id="equip management">
-            <a href="equip_management.html">管理設施狀態</a>
-        </div>
-        <div id="user management">
-            <a href="user_management.html">讀者管理</a>
-        </div>
-        <div id="user recommend management">
-            <a href="recommend_manage.html">管理讀者推薦清單</a>
-        </div>
-        <div id="news">
-            <a href="announcement.html">管理消息發布</a>
-        </div>
-        <div id="manager recommend management">
-            <a href="manager_recommend.html">管理館員推薦清單</a>
-        </div>
+        <form class="page">
+            <div id="manager_login" class="manager_login" style="background-color:brown;">
+                <p style="color: white; font-size: large;font-weight: bolder;margin-left: 5%;">三校資工圖書管理系統
+                <a href="manager_login.html" style="font-size:medium;margin-left: 80%; color:white;font-weight: normal;">登入</a>
+            </div>
+            <div class="options" style="height: 100%;width: 30%;">
+                <p style="color: brown;text-align: center;font-size: large;margin-top: 2%;font-weight: bold;">功能表</p>
+                <input type="button" class="option_btn" value="查看/修改館藏資訊" onclick="javascript:location.href='collection_info_management.html'"/>
+                <input type="button" class="option_btn" value="管理館藏流動狀態" onclick="javascript:location.href='collection_management.html'"/>
+                <input type="button" class="option_btn" value="管理設施狀態" onclick="javascript:location.href='equip_management.html'"/>
+                <input type="button" class="option_btn" value="讀者管理" onclick="javascript:location.href='user_management.html'"/>
+                <input type="button" class="option_btn" value="管理讀者推薦清單" onclick="javascript:location.href='recommend_manage.html'"/>
+                <input type="button" class="option_btn" value="管理消息發布" onclick="javascript:location.href='announcement.html'"/>
+                <input type="button" class="option_btn" value="管理館員推薦清單" onclick="javascript:location.href='manager_recommend.html'"/>
+            </div>
+        </form>
     </body>
 </html>

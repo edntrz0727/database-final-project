@@ -1,20 +1,93 @@
 <html>
     <head>
         <title>進階搜尋功能</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                text-decoration: none;
+                box-sizing: border-box;
+            }
+            
+        body{
+            width: 100%;
+            height: 100%;
+            background-color: antiquewhite;
+        }
+        .options{
+            margin-top: 2%;
+            border-color: brown;
+        }
+        tr,th{
+            padding-top:  5%;
+        }
+        </style>
     </head>
     <body>
-        <div id="options">
-            <form action="adv_research.php" method="post">
-                書籍名稱: <input type="text" name="book_name" value=""><br>
-                書籍作者: <input type="text" name="author" value=""><br>
-                ISBN: <input type="text" name="ISBN" value=""><br>
-                書籍譯者: <input type="text" name="translator" value=""><br>
-                書籍語言: <input type="text" name="language" value=""><br>
-                書籍科目: <input type="text" name="subject_handling" value=""><br>
-                版次: <input type="text" name="edition" value=""><br>
-                出版日期: <input type="text" name="publish_date" value=""><br>
-                出版商: <input type="text" name="publisher" value=""><br>
-                <input type="submit" name="button" value="搜尋">
+        <div id="banner" class="banner" style="background-color:brown;">
+			<p style="color: white; font-size: large;font-weight: bolder;margin-left: 5%;">三校資工圖書系統
+		</div>
+        <div id="option" style="width: 100%; text-align: center; margin-top: 2%;">
+            <p style="color: brown;font-weight: bold;">館藏進階搜尋</p>
+            <form action="" method="post">
+                <table style="margin-left: 40%;">
+                    <tr>
+                        <th>書籍名稱：</th>
+                        <th>
+                            <input type="text" name="book_name" value="" class="options">
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>書籍作者：</th>
+                        <th>
+                            <input type="text" name="author" value="" class="options">
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>ISBN：</th>
+                        <th>
+                            <input type="text" name="ISBN" value="" class="options">
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>書籍譯者：</th>
+                        <th>
+                            <input type="text" name="translator" value="" class="options">
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>書籍語言：</th>
+                        <th>
+                            <input type="text" name="language" value="" class="options">
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>書籍科目：</th>
+                        <th>
+                            <input type="text" name="subject_handling" value="" class="options">
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>版次：</th>
+                        <th>
+                            <input type="text" name="edition" value="" class="options">
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>出版日期：</th>
+                        <th>
+                            <input type="text" name="publish_date" value="" class="options">
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>出版商：</th>
+                        <th>
+                            <input type="text" name="publisher" value="" class="options">
+                        </th>
+                    </tr>
+                </table>
+                <input type="button" name="button" value="搜尋" onclick="javascript:location.href='search_result.html'" style="background-color: brown;color: white;border: none;border-radius: 10%;margin-top: 2%;">
             </form>
         </div>
     </body>
