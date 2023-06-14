@@ -1,13 +1,33 @@
 <html>
     <head>
         <title>登入成功</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                text-decoration: none;
+                box-sizing: border-box;
+            }
+            body{
+                width: 100%;
+                height: 100vh;
+                background-color:antiquewhite;
+                font-size: 12px;
+            }
+            form.log_suc{
+                width: 100%;
+                height: 100vh;
+                background-color: antiquewhite;
+            }
+        </style>
     </head>
     <body>
-        <h3>登入成功，請返回首頁</h3>
-        <div id="button">
-            <input type="button" onclick="javascript:location.href='user_index.html'"><!--不確定跳轉是不是這樣寫，先放著-->
-            回到首頁
-            </input>
+        <form class="log_suc">
+        <p style="text-align: center;font-size: large;font-weight: bold;margin-top: 5%;">登入成功</p>
+        <div id="button" style="text-align: center;margin-top: 2%;">
+            <input type="button" value="回到首頁" onclick="javascript:location.href='user_index.html'" style="color: brown;border: none;background-color: antiquewhite;">
         </div>
     </body>
+</form>
 </html>
