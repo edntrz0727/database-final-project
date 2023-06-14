@@ -17,7 +17,7 @@
 	
 	<h1 align="center">查詢結果</h1>
 	<table style="width:50%" align="center">
-		<tr><th>書名</th><th>作者</th><th>出版日期</th></tr>
+		<tr><th>書名</th><th>作者</th><th>出版日期</th><th colspan="2">館藏頁面</th></tr>
         <?php
 
         $conn=require_once "config.php";
@@ -38,7 +38,7 @@
 
             
 
-            $sql = "SELECT title, writer, publishDate
+            $sql = "SELECT title, writer, publishDate, ISBN
                     FROM BOOK
                     WHERE title = '$title' or writer = '$writer' or ISBN = '$ISBN' or company = '$company' or translator = '$translator' or 
                     publishDate = '$publishDate' or edition = '$edition' or subjecthead =  '$subjecthead' or language = '$language'";
@@ -51,6 +51,7 @@
                         '<td>'.$row['title'].'</td>'.
                         '<td>'.$row['writer'].'</td>'.
                         '<td>'.$row['publishDate'].'</td>'.
+                        '<td><a href="collection_info.php?id='.$row['ISBN'].'">查看</td>'.
                     '</tr>';
                 }
             } else {
