@@ -79,6 +79,7 @@
 				<tr>
 					<th>發布時間</th>
 					<th>公告內容</th>
+                    <th>詳情</th>
 				</tr>
                 <?php
                     $conn=require_once "config.php";
@@ -93,6 +94,7 @@
                             echo'<tr>'.
                                 '<td>'.$row['postDate'].'</td>'.
                                 '<td>'.$row['title'].'</td>'.
+                                '<td><a href="news.php?id='.$row['newID'].'">查看</td>'.
                             '</tr>';
                         }
                     } else {
