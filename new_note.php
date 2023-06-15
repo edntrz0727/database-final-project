@@ -18,7 +18,7 @@ if (isset($_POST['note_name']) && isset($_POST['new_note_info']) ) {
 	
     $result = $conn->query($sql);
 	if ($result) {
-        echo "新增成功!<br> <a href='read_history.html'>返回主頁</a>";
+        echo "新增成功!<br> <a href='user_info.php'>返回主頁</a>";
 	} else {
         echo "新增失敗";
 	}
