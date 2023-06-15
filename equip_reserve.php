@@ -23,7 +23,7 @@ if (isset($_POST['equip_name']) && isset($_POST['equip_id']) && isset($_POST['eq
         $insert_sql = "INSERT INTO `E_RESERVATIOB` (`libraryID`, `equipID`) VALUE ('$libraryID', '$equipID')";
         $insert_result = $conn->query($insert_sql);
         if ($insert_result) {
-            echo "預約成功!";
+            echo "預約成功!<br> <a href='user_index.php'>返回首頁</a>";
         } else {
             echo "預約失敗";
         }
