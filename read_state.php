@@ -35,7 +35,8 @@
                 <table style="margin-left: 44%;">
                     <tr>
                         <th>館藏名稱</th>
-                        <th>借閱狀態</th>
+                        <th>借閱日期</th>
+                        <th>應還日期</th>
                     </tr>
                     <?php
 
@@ -47,8 +48,8 @@
                         //$libraryID = '1111111';
 
                         $sql = "SELECT *
-                                FROM B_BORROW natural join BOOK
-                                WHERE libraryID = $libraryID";
+                                FROM B_BORROW as bb, BOOK as b
+                                WHERE bb.ISBN = b.ISBN and bb.libraryID = '$libraryID'";
 
                         $result = $conn->query($sql);
                         if ($result) {
@@ -58,7 +59,7 @@
                                     echo'<tr>'.
                                         '<td>'.$row['title'].'</td>'.
                                         '<td>'.$row['borrowdate'].'</td>'.
-                                        '<td>'.$row['duedate'].'</td>'.
+                                        '<td>'.$row['duedata'].'</td>'.
                                     '</tr>';
                                 }
                             } else {
