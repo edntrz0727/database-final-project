@@ -1,0 +1,63 @@
+<html>
+<head>
+	<title>讀者管理系統</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<script>
+	document.addEventListener('DOMContentLoaded', function() {
+        var deleteLinks = document.querySelectorAll('.delete-link');
+        deleteLinks.forEach(function(link) {
+            link.addEventListener('click', function(event) {
+                var check = confirm('確認新增');
+                if (check === false) {
+                    event.preventDefault(); // 取消默认行为，阻止链接的跳转
+                }
+            });
+        });
+    });
+</script>
+<body>
+	
+	<h1 align="center">新增讀者資料</h1>
+	<form action="insertreader.php" method="post">	
+	  <table width="500" border="1" bgcolor="#cccccc" align="center">
+		<tr>
+		  <th>studentID</th>
+		  <td bgcolor="#FFFFFF"><input type="text" name="studentID" /></td>
+		</tr>
+		<tr>
+		  <th>name</th>
+		  <td bgcolor="#FFFFFF"><input type="text" name="name"  /></td>
+		</tr>
+		<tr>
+		  <th>school</th>
+		  <td bgcolor="#FFFFFF">
+            <input type="radio" name="school" value='ntu'>ntu</input>
+			<input type="radio" name="school" value='ntnu'>ntnu</input>
+            <input type="radio" name="school" value='ntust'>ntust</input>
+		  </td>
+		</tr>
+        <tr>
+            <th>password</th>
+            <td bgcolor="#FFFFFF"><input type="text" name="password"  /></td>
+          </tr>
+          <tr>
+            <th>phone</th>
+            <td bgcolor="#FFFFFF"><input type="text" name="phone"  /></td>
+          </tr>
+          <tr>
+            <th>address</th>
+            <td bgcolor="#FFFFFF"><input type="text" name="address"  /></td>
+          </tr>
+          <tr>
+            <th>email</th>
+            <td bgcolor="#FFFFFF"><input type="text" name="email"  /></td>
+          </tr>
+		<tr>
+		  <th colspan="2"><input type="submit" value="新增" class="delete-link"/></th>
+		</tr>
+	  </table>
+	</form>
+</body>
+	
+</html>
