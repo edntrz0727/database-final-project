@@ -24,24 +24,25 @@
         }
         </style>
     </head>
+    <meta charset="utf-8">
     <body>
         <div id="banner" class="banner" style="background-color:brown;">
 			<p style="color: white; font-size: large;font-weight: bolder;margin-left: 5%;">三校資工圖書系統
 		</div>
         <div id="option" style="width: 100%; text-align: center; margin-top: 2%;">
             <p style="color: brown;font-weight: bold;">新增館藏</p>
-            <form action="" method="post">
+            <form action="htmlinsertbook.php" method="post">
                 <table style="margin-left: 40%;">
                     <tr>
                         <th>書籍名稱：</th>
                         <th>
-                            <input type="text" name="book_name" value="" class="options">
+                            <input type="text" name="title" value="" class="options">
                         </th>
                     </tr>
                     <tr>
                         <th>書籍作者：</th>
                         <th>
-                            <input type="text" name="author" value="" class="options">
+                            <input type="text" name="writer" value="" class="options">
                         </th>
                     </tr>
                     <tr>
@@ -65,7 +66,7 @@
                     <tr>
                         <th>書籍科目：</th>
                         <th>
-                            <input type="text" name="subject_handling" value="" class="options">
+                            <input type="text" name="subjecthead" value="" class="options">
                         </th>
                     </tr>
                     <tr>
@@ -77,17 +78,17 @@
                     <tr>
                         <th>出版日期：</th>
                         <th>
-                            <input type="text" name="publish_date" value="" class="options">
+                            <input type="text" name="publishDate" value="" class="options">
                         </th>
                     </tr>
                     <tr>
                         <th>出版商：</th>
                         <th>
-                            <input type="text" name="publisher" value="" class="options">
+                            <input type="text" name="company" value="" class="options">
                         </th>
                     </tr>
                 </table>
-                <input type="button" name="button" value="新增" onclick="javascript:location.href='collection_info_manage.html'" style="background-color: brown;color: white;border: none;border-radius: 10%;margin-top: 2%;">
+                <input type="submit" name="button" value="新增" style="background-color: brown;color: white;border: none;border-radius: 10%;margin-top: 2%;">
             </form>
         </div>
     </body>
