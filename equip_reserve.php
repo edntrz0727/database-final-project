@@ -1,20 +1,39 @@
-<html>
-    <head>
-        <title>設施預約</title>
-    </head>
-    <body>
-        <div>
-            設施預約<br>
-            請完整填寫表格後按下送出預約按鈕<br>
-        </div>
-        <div id="table">
-            <form>
-                設施名稱: <input type="text" name="equip_name" value=""><br>
-                設施ID: <input type="text" name="equip_id" value=""><br>
-                設施位置: <input type="text" name="location" value=""><br>
-                設施狀態: <input type="text" name="state" value=""><br>
-                <input type="submit" name="button" value="送出預約">
-             </form>
-        </div>
-    </body>
-</html>
+<?php
+
+$conn=require_once "config.php";
+
+session_start();
+
+if (isset($_POST['equip_name']) && isset($_POST['equip_id']) && isset($_POST['equip_loc']) ) {
+    $name = $_POST['equip_name'];
+    $equipID = $_POST['equip_id'];
+    $Lname = $_POST['equip_loc'];
+
+    
+
+    $sql = "SELECT *
+            FROM EQUIPMENT
+            WHERE name = '$name' and equipID = '$equipID' and Lname = '$Lname' and state = 'free'";
+    
+    $result = $conn->query($sql);
+    if ($result) {	
+        //$libraryID = $_SESSION['libraryID'];
+        $libraryID = '1111111';
+
+        $insert_sql = "INSERT INTO `E_RESERVATIOB` (`libraryID`, `equipID`) VALUE ('$libraryID', '$equipID')";
+        $insert_result = $conn->query($insert_sql);
+        if ($insert_result) {
+            echo "預約成功!";
+        } else {
+            echo "預約失敗";
+        }
+    } else {
+        echo "查詢失敗";
+    }
+
+}else{
+    // 跳到失敗頁面
+    echo "資料不完整";
+}
+                
+?>
