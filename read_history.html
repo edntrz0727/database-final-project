@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>修改設施資訊</title>
+        <title>閱讀紀錄</title>
         <style>
             * {
                 margin: 0;
@@ -28,31 +28,26 @@
         <div id="banner" class="banner" style="background-color:brown;">
 			<p style="color: white; font-size: large;font-weight: bolder;margin-left: 5%;">三校資工圖書系統
 		</div>
-        <p style="color: brown;font-weight: bold;margin-top: 2%;font-size: large;text-align: center;">設施資訊修改</p>
-        <div id="revise_equip">
-            <form action="" method="post">
-                <table style="margin-top: 1%;margin-left: 40%;">
+        <p style="color: brown;font-weight: bold;font-size: large;text-align: center;margin-top: 2%;">閱讀紀錄</p>
+        <div>
+            <form action="" method="get">
+                <table style="margin-left: 44%;">
                     <tr>
-                        <th>設施名稱：</th>
-                        <th>
-                            <input type="text" id="equip_name"/>
-                        </th>
+                        <th>筆記名稱</th>
+                        <th>修改日期</th>
+                        <th></th>
                     </tr>
                     <tr>
-                        <th>設施ID：</th>
                         <th>
-                            <input type="text" id="equip_id"/>
+                            <a href="note.html">第一篇</a>
                         </th>
-                    </tr>
-                    <tr>
-                        <th>設施位置：</th>
                         <th>
-                            <input type="text" id="equip_loc"/>
+                            2023.06.14
                         </th>
                     </tr>
                 </table>
-                <div class="btns" style="text-align: center;margin-top: 2%;">
-                    <input type="button" value="保存設施資訊" onclick="javascript:location.href='equip_info.html'" style=" background-color: antiquewhite;color: brown;border: none;"/>
+                <div class="btn" style="text-align: center;margin-top: 2%;">
+                    <input type="button" value="新增筆記" onclick="javascript:location.href='new_note.html'" style=" background-color: antiquewhite;color: brown;border: none;"/>
                 </div>
             </form>
         </div>

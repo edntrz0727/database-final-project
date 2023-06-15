@@ -1,11 +1,37 @@
 <html>
     <head>
         <title>推薦清單管理</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                text-decoration: none;
+                box-sizing: border-box;
+            }
+            
+        body{
+            width: 100%;
+            height: 100%;
+            background-color: antiquewhite;
+        }
+        .options{
+            margin-top: 2%;
+            border-color: brown;
+        }
+        tr,th{
+            padding-top:  5%;
+        }
+        </style>
     </head>
     <body>
+        <div id="banner" class="banner" style="background-color:brown;">
+			<p style="color: white; font-size: large;font-weight: bolder;margin-left: 5%;">三校資工圖書系統
+		</div>
+        <p style="color: brown;font-weight: bold;font-size: large;text-align: center;margin-top: 2%;">推薦清單</p>
         <div id="recommend list">
             <form action="" method="get">
-                <table>
+                <table style="margin-top: 1%;margin-left: 42%;">
                     <tr>
                         <th>推薦id</th>
                         <th>推薦書名</th>

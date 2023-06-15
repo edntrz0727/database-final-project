@@ -1,13 +1,39 @@
 <html>
     <head>
         <title>公告資訊</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                text-decoration: none;
+                box-sizing: border-box;
+            }
+            
+        body{
+            width: 100%;
+            height: 100%;
+            background-color: antiquewhite;
+        }
+        .info{
+            width: 60%;
+            margin-top: 5%;
+            text-align: center;
+        }
+        tr,th{
+           padding-top: 2%;
+        }
+        </style>
     </head>
     <body>
-        <div id="announcement_info">
+        <div id="banner" class="banner" style="background-color:brown;">
+			<p style="color: white; font-size: large;font-weight: bolder;margin-left: 5%;">三校資工圖書系統
+		</div>
+        <div class="info">
             <form action="" method="get">
-                <table>
+                <table style="margin-left: 40%;">
                     <tr>
-                        <th>公告日期：</th>
+                        <th>公告日期</th>
                         <th></th>
                     </tr>
                     <tr>
@@ -15,8 +41,10 @@
                         <th></th>
                     </tr>
                 </table>
-                <input type="button" value="刪除公告" onclick="javascript:location.href='announcement.html'"/>
-                <input type="button" value="返回消息管理" onclick="javascript:location.href='announcement.html'"/>
+                <div class="btns" style="margin-top: 2%;">
+                    <input type="button" value="刪除公告" onclick="javascript:location.href='announcement.html'" style="background-color: antiquewhite;color: brown;border: none;margin-left: 30%;"/>
+                    <input type="button" value="返回消息管理" onclick="javascript:location.href='announcement.html'" style="background-color: antiquewhite;color: brown;border: none; margin-left: 5%;"/>
+                </div>
             </form>
         </div>
     </body>
