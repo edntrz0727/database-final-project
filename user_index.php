@@ -69,7 +69,7 @@
 	
 	<div class="sidebar" style="margin-top: 2%;">
 		<p style="color: brown;text-align: center;font-size: large;margin-top: 2%;font-weight: bold;">其他功能</p>
-			<input type="button" class="option_btn" value="設施預約" onclick="javascript:location.href='equip_reserve.html'"/>
+			<input type="button" class="option_btn" value="設施預約" onclick="javascript:location.href='equip_reserve.php'"/>
 			<input type="button" class="option_btn" value="書籍推薦" onclick="javascript:location.href='recommend.html'"/>
 	</div>
 	<div class="announcement" style="margin-top: 2%;">
