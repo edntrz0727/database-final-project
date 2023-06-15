@@ -2,8 +2,8 @@
 
 $conn=require_once "config.php";
 
-if (isset($_POST['account_name']) && isset($_POST['password'])) {
-	$libraryID = $_POST['account_name'];
+if (isset($_POST['account']) && isset($_POST['password'])) {
+	$libraryID = $_POST['account'];
 	$password = $_POST['password'];
 
 	$sql = "SELECT *
