@@ -1,4 +1,4 @@
-DELIMITER //
+/*DELIMITER //
 
 CREATE TRIGGER before_insert_recommend
 BEFORE INSERT ON RECOMMEND
@@ -61,6 +61,29 @@ BEGIN
 
     -- 设置新行的 mediaID 列值
     SET NEW.BreservationID = new_reservID;
+
+END //
+
+DELIMITER ;*/
+
+-- 新增筆記
+DELIMITER //
+
+CREATE TRIGGER before_insert_note
+BEFORE INSERT ON READHISTORY
+FOR EACH ROW
+BEGIN
+    DECLARE count INT;
+    DECLARE new_noteID VARCHAR(20);
+
+    -- 获取已存在的记录数量
+    SELECT COUNT(*) INTO count FROM READHISTORY;
+
+    -- 生成新的 mediaID
+    SET new_noteID = CONCAT('n', LPAD(count + 1, 4, '0'));
+
+    -- 设置新行的 mediaID 列值
+    SET NEW.hisID = new_noteID;
 
 END //
 

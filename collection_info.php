@@ -11,7 +11,7 @@
 
                     $ISBN = $_GET["id"];
                     $sql = "SELECT * 
-                            from BOOK 
+                            from BOOK natural join BOOK_PLACE
                             where ISBN = $ISBN";	// set up your sql query
                     $result = $conn->query($sql);	// Send SQL Query
                     if($result){
@@ -25,6 +25,8 @@
                         $company = $row['company'];
                         $publishDate = $row['publishDate'];
                         $state = $row['state'];
+                        $Lname = $row['Lname'];
+                        $bookID = $row['bookID'];
                     }
                     else{
                         echo "查無資料!";
@@ -66,6 +68,10 @@
                     <tr>
                         <td>出版日期</td>
                         <td><?php echo $publishDate; ?></td>
+                    </tr>
+                    <tr>
+                        <td>館藏地</td>
+                        <td><?php echo $Lname,$bookID, $number; ?></td>
                     </tr>
                 </table>
             </form>

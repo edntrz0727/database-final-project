@@ -163,7 +163,7 @@ Create table B_RESERVATIOB (
     foreign key (ISBN) references BOOK(ISBN) on delete cascade
 )ENGINE=InnoDB;
 
-//*Create table LOAN (
+/*Create table LOAN (
 	loanID varchar(20),
     libraryID varchar(20),
     ISBN varchar(20),
@@ -177,11 +177,10 @@ Create table B_RESERVATIOB (
 Create table READHISTORY(
 	hisID varchar(20),
     libraryID varchar(20),
-    ISBN varchar(20),
-    readdata varchar(20),
+    title varchar(20),
+    text varchar(20),
     PRIMARY KEY(hisID),
-	foreign key (libraryID) references READER(libraryID) on delete cascade,
-    foreign key (ISBN) references BOOK(ISBN) on delete cascade
+	foreign key (libraryID) references READER(libraryID) on delete cascade
 )ENGINE=InnoDB;
 
 Create table RECOMMEND (
