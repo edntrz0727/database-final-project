@@ -130,5 +130,8 @@
                 <input type="button" value="預約" style="background-color: antiquewhite;color: brown;border: none;" onclick="javascript:location.href='book_reserve.php?id=<?php echo $ISBN; ?>'"/>
             </form>
         </div>
+        <div class="btn" style="text-align: center;margin-top: 2%;">
+            <input type="button" value="返回首頁" onclick="javascript:location.href='user_index.php'" style=" background-color: antiquewhite;color: brown;border: none;"/>
+        </div>
     </body>
 </html>

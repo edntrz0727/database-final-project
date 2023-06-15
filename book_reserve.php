@@ -11,7 +11,7 @@ $ISBN = $_GET['id'];
 $insert_sql = "INSERT INTO `B_RESERVATIOB` (`libraryID`, `ISBN`) VALUE ('$libraryID', '$ISBN')";
 $insert_result = $conn->query($insert_sql);
 if ($insert_result) {
-    echo "預約成功!";
+    echo "預約成功!<br> <a href='user_index.php'>返回首頁</a>";
 } else {
     echo "預約失敗";
 }

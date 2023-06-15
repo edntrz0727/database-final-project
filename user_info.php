@@ -84,7 +84,7 @@
             </form>
         </div>
         <div class="btns" style="text-align: center;margin-top: 2%;">
-            <input type="submit" value="修改個人資料" onclick="javascript:location.href='user_info_revise.html'" style=" background-color: antiquewhite;color: brown;border: none;" />
+            <input type="submit" value="修改個人資料" onclick="javascript:location.href='revise_user_info.php'" style=" background-color: antiquewhite;color: brown;border: none;" />
         </div>
         <div id="reading state" style="text-align: center;margin-top: 1%;">
             <input type="button" value="查看閱讀狀態" onclick="javascript:location.href='read_state.php'" style=" background-color: antiquewhite;color: brown;border: none;" />
