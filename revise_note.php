@@ -6,8 +6,8 @@ if (isset($_POST['note_name']) && isset($_POST['note_info']) ) {
     session_start();
 	$title = $_POST['note_name'];
 	$text = $_POST['note_info'];
-	//$libraryID = $_SESSION['libraryID'];
-    $libraryID = '1111111';
+	$libraryID = $_SESSION['libraryID'];
+    //$libraryID = '1111111';
     $hisID = $_GET['id'];
 
 	$update_sql = "UPDATE READHISTORY

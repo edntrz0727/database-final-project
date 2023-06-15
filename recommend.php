@@ -5,8 +5,8 @@ $conn=require_once "config.php";
 session_start();
 
 if (isset($_POST['book_name']) && isset($_POST['author']) && isset($_POST['ISBN']) ) {
-    //$libraryID = $_SESSION['libraryID'];
-    $libraryID = '1111111';
+    $libraryID = $_SESSION['libraryID'];
+    //$libraryID = '1111111';
 	$title = $_POST['book_name'];
 	$writer = $_POST['author'];
     $ISBN = $_POST['ISBN'];

@@ -20,8 +20,8 @@
 
             session_start();
 
-            //$libraryID = $_SESSION['libraryID'];
-            $libraryID = '1111111';
+            $libraryID = $_SESSION['libraryID'];
+            //$libraryID = '1111111';
 
             $sql = "SELECT *
                     FROM B_BORROW natural join BOOK

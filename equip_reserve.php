@@ -17,8 +17,8 @@ if (isset($_POST['equip_name']) && isset($_POST['equip_id']) && isset($_POST['eq
     
     $result = $conn->query($sql);
     if ($result) {	
-        //$libraryID = $_SESSION['libraryID'];
-        $libraryID = '1111111';
+        $libraryID = $_SESSION['libraryID'];
+        //$libraryID = '1111111';
 
         $insert_sql = "INSERT INTO `E_RESERVATIOB` (`libraryID`, `equipID`) VALUE ('$libraryID', '$equipID')";
         $insert_result = $conn->query($insert_sql);

@@ -5,8 +5,8 @@ $conn=require_once "config.php";
 session_start();
 
 if (isset($_POST['note_name']) && isset($_POST['new_note_info']) ) {
-    //$libraryID = $_SESSION['libraryID'];
-    $libraryID = '1111111';
+    $libraryID = $_SESSION['libraryID'];
+    //$libraryID = '1111111';
 	$title = $_POST['note_name'];
 	$text = $_POST['new_note_info'];
 

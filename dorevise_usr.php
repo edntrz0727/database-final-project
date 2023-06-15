@@ -7,8 +7,8 @@ if (isset($_POST['tel']) && isset($_POST['address']) && isset($_POST['email'])) 
 	$phone = $_POST['tel'];
 	$address = $_POST['address'];
 	$email = $_POST['email'];
-	//$libraryID = $_SESSION['libraryID'];
-    $libraryID = '1111111';
+	$libraryID = $_SESSION['libraryID'];
+    //$libraryID = '1111111';
 
 	$update_sql = "UPDATE READER
 	               SET phone = '$phone', address = '$address', email = '$email' 

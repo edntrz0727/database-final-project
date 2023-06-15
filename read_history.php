@@ -13,8 +13,8 @@
                     </tr>
             <?php
                 session_start();
-                //$libraryID = $_SESSION['libraryID'];
-                $libraryID = '1111111';
+                $libraryID = $_SESSION['libraryID'];
+                //$libraryID = '1111111';
 
                 $conn=require_once "config.php";
                 

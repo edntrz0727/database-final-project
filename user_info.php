@@ -8,8 +8,8 @@
             $conn=require_once "config.php";
 
             session_start();
-            //$libraryID = $_SESSION['libraryID'];
-            $libraryID = '1111111';
+            $libraryID = $_SESSION['libraryID'];
+            //$libraryID = '1111111';
             $info_sql = "SELECT *
                          FROM READER
                          WHERE libraryID = '$libraryID'";

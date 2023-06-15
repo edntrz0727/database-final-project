@@ -4,8 +4,8 @@ $conn=require_once "config.php";
 
 session_start();
 
-//$libraryID = $_SESSION['libraryID'];
-$libraryID = '1111111';
+$libraryID = $_SESSION['libraryID'];
+//$libraryID = '1111111';
 $ISBN = $_GET['id'];
 
 $insert_sql = "INSERT INTO `B_RESERVATIOB` (`libraryID`, `ISBN`) VALUE ('$libraryID', '$ISBN')";
