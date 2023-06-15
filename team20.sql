@@ -163,7 +163,7 @@ Create table B_RESERVATIOB (
     foreign key (ISBN) references BOOK(ISBN) on delete cascade
 )ENGINE=InnoDB;
 
-Create table LOAN (
+//*Create table LOAN (
 	loanID varchar(20),
     libraryID varchar(20),
     ISBN varchar(20),
@@ -172,7 +172,7 @@ Create table LOAN (
     PRIMARY KEY(loanID),
 	foreign key (libraryID) references READER(libraryID) on delete cascade,
     foreign key (ISBN) references BOOK(ISBN) on delete cascade
-)ENGINE=InnoDB;
+)ENGINE=InnoDB;*/
 
 Create table READHISTORY(
 	hisID varchar(20),
@@ -234,7 +234,7 @@ Create table NEWS (
     taq  varchar(100),
     PRIMARY KEY (newID),
     foreign key (librarianID) references LIBRARIAN(librarianID) on delete cascade
-)ENGINE=InnDB;
+)ENGINE=InnoDB;
 
 Create table PENALTY (
 	penallyID varchar(20),
@@ -264,6 +264,8 @@ Create table B_BORROW (
 	libraryID varchar(20),
     librarianID varchar(20),
     ISBN varchar(20),
+    duedata varchar(20),
+    borrowdate varchar(20),
     state varchar(20),
     PRIMARY KEY(bbID),
     foreign key (ISBN) references BOOK(ISBN) on delete cascade,

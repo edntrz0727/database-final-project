@@ -63,7 +63,7 @@
             </form>
         </div>
         <div id="reading state">
-            <input type="button" value="查看閱讀狀態" onclick="javascript:location.href='read_state.html'"/>
+            <input type="button" value="查看閱讀狀態" onclick="javascript:location.href='read_state.php'"/>
         </div>
         <div id="reading history">
             <input type="button" value="閱讀紀錄" onclick="javascript:location.href='read_history.html'"/>
