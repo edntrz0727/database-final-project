@@ -66,6 +66,9 @@
                 <div class="btn" style="text-align: center;margin-top: 2%;">
                     <input type="button" value="新增筆記" onclick="javascript:location.href='new_note.html'" style=" background-color: antiquewhite;color: brown;border: none;"/>
                 </div>
+                <div class="btn" style="text-align: center;margin-top: 2%;">
+                    <input type="button" value="返回首頁" onclick="javascript:location.href='user_index.php'" style=" background-color: antiquewhite;color: brown;border: none;"/>
+                </div>
             </form>
         </div>
     </body>

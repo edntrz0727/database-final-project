@@ -1,11 +1,33 @@
 <html>
     <head>
         <title>館藏資訊</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                text-decoration: none;
+                box-sizing: border-box;
+            }
+            
+        body{
+            width: 100%;
+            height: 100%;
+            background-color: antiquewhite;
+        }
+        tr,th{
+           padding-top: 2%;
+        }
+        </style>
     </head>
     <body>
-        <div id="collection info">
+        <div id="banner" class="banner" style="background-color:brown;">
+			<p style="color: white; font-size: large;font-weight: bolder;margin-left: 5%;">三校資工圖書系統
+		</div>
+        <div id="collection info" style="margin-top: 2%;text-align: center;">
+            <p style="font-size: large;font-weight: bold;color: brown;">館藏資訊</p>
             <form action="get_collection_info.php" method="get">
-                <table>
+                <table  style="margin-left: 40%;margin-top: 1%;">
                 <?php
                     $conn=require_once "config.php";
 
@@ -78,7 +100,7 @@
         </div>
         <div id="collection reservation">
             <form action="collection_info.php" method="get">
-                <table>
+                <table  style="margin-left: 40%;margin-top: 5%;">
                     <tr>
                         <td>書籍狀態</td>
                         <td>能否預約</td>
@@ -103,13 +125,10 @@
                 </table>
             </form>
         </div>
-        <div>
-            <?php
-                echo '<a href="book_reserve.php?id='.$ISBN.'" method="get"><!--送出預約-->
-                        <input type="submit" value="預約" />
-                    </form>'
-            ?>
-            
+        <div class="reseve" style="text-align: center;margin-top: 1%;">
+            <form action="" method="post"><!--送出預約-->
+                <input type="button" value="預約" style="background-color: antiquewhite;color: brown;border: none;" onclick="javascript:location.href='book_reserve.php?id=<?php echo $ISBN; ?>'"/>
+            </form>
         </div>
     </body>
 </html>

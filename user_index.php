@@ -51,15 +51,16 @@
 	</style>
 </head>
 <body>
-	<form class="page">
-		<div id="banner" class="banner" style="background-color:brown;">
-			<p style="color: white; font-size: large;font-weight: bolder;margin-left: 5%;">三校資工圖書系統
-			<a href="user_info.php" style="font-size:medium;margin-left: 80%; color:white;font-weight: normal;">會員資料</a>
-		</div>
+    <div id="banner" class="banner" style="background-color:brown;">
+        <p style="color: white; font-size: large;font-weight: bolder;margin-left: 5%;">三校資工圖書系統
+        <a href="user_info.php" style="font-size:medium;margin-left: 80%; color:white;font-weight: normal;">會員資料</a>
+    </div>
 
 	<div class="search" style="text-align: center; margin-top: 5%;height: 5%">
-		<input type="text" name="search" id="search" placeholder="輸入尋找書籍" style="width: 40%;border: none;height: 100%;">
-		<button class="search" style="background-color: antiquewhite;border-color: brown;border: none;margin-left: 2%;"><i class="fas fa-search"></i></button>
+        <form action="search.php" method="post">
+            <input type="text" name="search" id="search" placeholder="輸入尋找書籍" style="width: 40%;border: none;height: 100%;">
+            <button class="submit" style="background-color: antiquewhite;border-color: brown;border: none;margin-left: 2%;"><i class="fas fa-search"></i></button>
+        </form>
 	</div>
 
 	<div class="advanced search" style="text-align: center;margin-top: 1%;">
@@ -82,6 +83,5 @@
 			</table>
 		</form>
 	</div>
-</form>
 </body>
 </html>

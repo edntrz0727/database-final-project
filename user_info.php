@@ -92,5 +92,8 @@
         <div id="reading history" style="text-align: center;margin-top: 1%;">
             <input type="button" value="閱讀紀錄" onclick="javascript:location.href='read_history.php'" style=" background-color: antiquewhite;color: brown;border: none;" />
         </div>
+        <div class="btn" style="text-align: center;margin-top: 2%;">
+            <input type="button" value="返回首頁" onclick="javascript:location.href='user_index.php'" style=" background-color: antiquewhite;color: brown;border: none;"/>
+        </div>
     </body>
 </html>
