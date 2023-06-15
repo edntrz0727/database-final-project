@@ -2,19 +2,35 @@
 <head>
 	<title>學生資料庫管理系統</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                text-decoration: none;
+                box-sizing: border-box;
+            }
+            
+        body{
+            width: 100%;
+            height: 100%;
+            background-color: antiquewhite;
+        }
+        .options{
+            margin-top: 2%;
+            border-color: brown;
+        }
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 5px;
+            text-align: left;    
+        }
+        </style>
 </head>
-<style>
-	table, th, td {
-	border: 1px solid black;
-	border-collapse: collapse;
-	}
-	th, td {
-	padding: 5px;
-	text-align: left;    
-	}
-</style>
 <body>
-	
 	<h1 align="center">查詢結果</h1>
 	<table style="width:50%" align="center">
 		<tr><th>書名</th><th>作者</th><th>出版日期</th><th colspan="2">館藏頁面</th></tr>

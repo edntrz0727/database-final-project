@@ -2,8 +2,12 @@
 <head>
 	<title>書籍管理</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	    <script src="https://kit.fontawesome.com/998bef7baf.js" crossorigin="anonymous"></script>
 </head>
 <style>
+    body{
+        background-color: antiquewhite;
+    }
 	table, th, td {
 	border: 1px solid black;
 	border-collapse: collapse;
@@ -36,7 +40,7 @@
     <div align="center">
 		<form action="searchbook.php" method="post">
 			<input class="search-bar" type="text" name="search" placeholder="輸入尋找書籍關鍵字">
-			<button class="search-btn"></button>
+			<button class="search-btn"><i class="fas fa-search"></button>
 			<input type="radio" name="type" value="ISBN" checked>ISBN</input>
             <input type="radio" name="type" value="title">tilte</input>
             <input type="radio" name="type" value="subjecthead">subjecthead</input>
