@@ -80,6 +80,25 @@
 					<th>發布時間</th>
 					<th>公告內容</th>
 				</tr>
+                <?php
+                    $conn=require_once "config.php";
+				
+                    // ******** update your personal settings ******** 
+                    $sql = "SELECT * from NEWS";	// set up your sql query
+                    $result = $conn->query($sql);	// Send SQL Query
+    
+                    if ($result->num_rows > 0) {	
+                        while ( $row = mysqli_fetch_array ( $result, MYSQLI_ASSOC ) ) {
+                            // Process the Result here , need to modify.
+                            echo'<tr>'.
+                                '<td>'.$row['postDate'].'</td>'.
+                                '<td>'.$row['title'].'</td>'.
+                            '</tr>';
+                        }
+                    } else {
+                        echo "暫無公告";
+                    }
+                ?>
 			</table>
 		</form>
 	</div>

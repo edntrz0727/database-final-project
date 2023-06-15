@@ -33,7 +33,7 @@
 
                     $ISBN = $_GET["id"];
                     $sql = "SELECT * 
-                            from BOOK natural join BOOK_PLACE
+                            from BOOK 
                             where ISBN = $ISBN";	// set up your sql query
                     $result = $conn->query($sql);	// Send SQL Query
                     if($result){

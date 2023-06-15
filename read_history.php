@@ -32,7 +32,7 @@
         <p style="color: brown;font-weight: bold;font-size: large;text-align: center;margin-top: 2%;">閱讀紀錄</p>
         <div>
             <form action="" method="get">
-                <table style="margin-left: 44%;">
+                <table style="margin-left: 48%;">
                     <tr>
                         <th>筆記名稱</th>
                         <th></th>

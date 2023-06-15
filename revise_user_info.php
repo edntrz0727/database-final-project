@@ -92,7 +92,7 @@
                 <input type="submit" value="修改資料"/>
                 <input type="reset" value="清除資料"/>
                 <input type="button" value="取消修改" onclick="javascript:location.href='user_info.php'"/>
-        </div>
+            </div>
         <div class="btn" style="text-align: center;margin-top: 2%;">
             <input type="button" value="返回首頁" onclick="javascript:location.href='user_index.php'" style=" background-color: antiquewhite;color: brown;border: none;"/>
         </div>

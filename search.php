@@ -70,8 +70,8 @@
 
                     $sql = "SELECT title, writer, publishDate, ISBN
                             FROM BOOK
-                            WHERE title = '$title' or writer = '$writer' or ISBN = '$ISBN' or company = '$company' or translator = '$translator' or 
-                            publishDate = '$publishDate' or edition = '$edition' or subjecthead =  '$subjecthead' or language = '$language'";
+                            WHERE title like '%$title%' or writer like '%$writer%' or ISBN like '%$ISBN%' or company like '%$company%' or translator like '%$translator%' or 
+                            publishDate like '%$publishDate%' or edition like '%$edition%' or subjecthead like  '%$subjecthead%' or language like '%$language%'";
                     
                     $result = $conn->query($sql);
                     if ($result->num_rows > 0) {	
@@ -84,8 +84,23 @@
                                 '<td><a href="collection_info.php?id='.$row['ISBN'].'">查看</td>'.
                             '</tr>';
                         }
-                    } else {
-                        echo "查詢失敗";
+                    }
+
+                    $sql = "SELECT title, publishDate, journaID
+                            FROM JOURNAL
+                            WHERE title like '%$title%' or publishDate like '%$publishDate%'";
+                    
+                    $result = $conn->query($sql);
+                    if ($result->num_rows > 0) {	
+                        while ( $row = mysqli_fetch_array ( $result, MYSQLI_ASSOC ) ) {
+                            // Process the Result here , need to modify.
+                            echo'<tr>'.
+                                '<td>'.$row['title'].'</td>'.
+                                '<td>     </td>'.
+                                '<td>'.$row['publishDate'].'</td>'.
+                                '<td><a href="collection_info.php?id='.$row['journaID'].'">查看</td>'.
+                            '</tr>';
+                        }
                     }
 
                 }else{
