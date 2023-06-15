@@ -4,6 +4,12 @@
 <title>讀者管理系統</title>
 </head>
 <style>
+    body{
+        width: 100%;
+        height: 100%;
+        background-color: antiquewhite;
+        text-align:center;
+    }
 	table, th, td {
 	border: 1px solid black;
 	border-collapse: collapse;
@@ -31,6 +37,10 @@
     });
 </script>
 <body>
+<div id="banner" class="banner" style="background-color:brown;">
+			<p style="color: white; font-size: large;font-weight: bolder">三校資工圖書系統
+</div>
+<h3 align="center" style="color:brown">修改推薦</h3>
     <?php
         $conn=require_once "db_info.php";
         $ISBN=$_GET["id"];
@@ -42,20 +52,20 @@
         $detail = $row['detail'];
         $state = $row['state'];
     ?>
-<h1 align="center">修改推薦</h1>
+
 	<form action="run_updaterecommand.php" method="post">	
 	  <table width="500" border="1" bgcolor="#cccccc" align="center">
 		<tr>
 			<th>ISBN</th>
-			<td bgcolor="#FFFFFF"><input type="text" name="ISBN" value="<?php echo $ISBN; ?>" readonly/></td>
+			<td bgcolor="antiquewhite"><input type="text" name="ISBN" value="<?php echo $ISBN; ?>" readonly/></td>
 		</tr>
 		<tr>
 		  <th>title</th>
-		  <td bgcolor="#FFFFFF"><input type="text" name="title" value="<?php echo $title; ?>"/></td>
+		  <td bgcolor="antiquewhite"><input type="text" name="title" value="<?php echo $title; ?>"/></td>
 		</tr>
 		 <tr>
 		  <th>description</th>
-		  <td bgcolor="#FFFFFF"><textarea name="description" style="width: 100%; height: 200px; resize: none; padding: 5px; box-sizing: border-box;"><?php echo $description;?></textarea></td>
+		  <td bgcolor="antiquewhite"><textarea name="description" style="width: 100%; height: 200px; resize: none; padding: 5px; box-sizing: border-box;"><?php echo $description;?></textarea></td>
 		</tr>
 		<tr>
 		  <th colspan="2">

@@ -1,9 +1,15 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>讀者管理系統</title> <!-- mysql 自動化同步預約-->
+<title>設施管理系統</title> <!-- mysql 自動化同步預約-->
 </head>
 <style>
+    body{
+        width: 100%;
+        height: 100%;
+        background-color: antiquewhite;
+        text-align:center;
+    }
 	table, th, td {
 	border: 1px solid black;
 	border-collapse: collapse;
@@ -31,6 +37,10 @@
     });
 </script>
 <body>
+<div id="banner" class="banner" style="background-color:brown;">
+			<p style="color: white; font-size: large;font-weight: bolder">三校資工圖書系統
+</div>
+<h3 align="center" style="color:brown">修改設施狀況</h3>
     <?php
         $conn=require_once "db_info.php";
         $equipID=$_GET["id"];
@@ -41,20 +51,19 @@
         $Lname = $row['Lname'];
         $state = $row['state'];
     ?>
-<h1 align="center">修改設施</h1>
 	<form action="run_updateequip.php" method="post">	
 	  <table width="500" border="1" bgcolor="#cccccc" align="center">
 		<tr>
 			<th>equipID</th>
-			<td bgcolor="#FFFFFF"><input type="text" name="equipID" value="<?php echo $equipID; ?>" readonly/></td>
+			<td bgcolor="antiquewhite"><input type="text" name="equipID" value="<?php echo $equipID; ?>" readonly/></td>
 		</tr>
 		<tr>
 		  <th>name</th>
-		  <td bgcolor="#FFFFFF"><input type="text" name="name" value="<?php echo $name; ?>" /></td>
+		  <td bgcolor="antiquewhite"><input type="text" name="name" value="<?php echo $name; ?>" /></td>
 		</tr>
 		 <tr>
 		  <th>Lname</th>
-		  <td bgcolor="#FFFFFF">
+		  <td bgcolor="antiquewhite">
 		  <?php
             $sql2 = "SELECT * FROM library";
             $result2 = mysqli_query($conn, $sql2);
@@ -70,7 +79,7 @@
 		</tr>
         <tr>
 		  <th>state</th>
-		  <td bgcolor="#FFFFFF">
+		  <td bgcolor="antiquewhite">
             <input type="radio" name="state" value="空閒" <?php if($state=="空閒"){echo "checked";} ?>/>空閒</input>
             <input type="radio" name="state" value="使用中" <?php if($state=="使用中"){echo "checked";} ?>/>使用中</input>
             <input type="radio" name="state" value="已預約" <?php if($state=="已預約"){echo "checked";} ?>/>已預約</input><br>

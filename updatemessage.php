@@ -4,6 +4,12 @@
 <title>公告管理系統</title>
 </head>
 <style>
+	body{
+        width: 100%;
+        height: 100%;
+        background-color: antiquewhite;
+        text-align:center;
+    }
 	table, th, td {
 	border: 1px solid black;
 	border-collapse: collapse;
@@ -31,6 +37,10 @@
     });
 </script>
 <body>
+<div id="banner" class="banner" style="background-color:brown;">
+			<p style="color: white; font-size: large;font-weight: bolder">三校資工圖書系統
+</div>
+<h3 align="center" style="color:brown">修改公告</h3>
     <?php
         $conn=require_once "db_info.php";
         $newID=$_GET["id"];
@@ -45,36 +55,36 @@
         $test = $row['test'];
         $taq = $row['taq'];
     ?>
-<h1 align="center">修改公告</h1>
+
 	<form action="run_updatemessage.php" method="post">	
 	  <table width="500" border="1" bgcolor="#cccccc" align="center">
 		<tr>
 			<th>newID</th>
-			<td bgcolor="#FFFFFF"><input type="text" name="newID" value="<?php echo $newID; ?>" readonly/></td>
+			<td bgcolor="antiquewhite"><input type="text" name="newID" value="<?php echo $newID; ?>" readonly/></td>
 		</tr>
 		<tr>
 		  <th>librarianID</th>
-		  <td bgcolor="#FFFFFF"><input type="text" name="librarianID" value="<?php echo $librarianID; ?>" readonly/></td>
+		  <td bgcolor="antiquewhite"><input type="text" name="librarianID" value="<?php echo $librarianID; ?>" readonly/></td>
 		</tr>
 		 <tr>
 		  <th>title</th>
-		  <td bgcolor="#FFFFFF"><input type="text" name="title" value="<?php echo $title; ?>" /></td>
+		  <td bgcolor="antiquewhite"><input type="text" name="title" value="<?php echo $title; ?>" /></td>
 		</tr>
 		<tr>
 		  <th>postDate</th>
-		  <td bgcolor="#FFFFFF"><input type="text" name="postDate" value="<?php echo $postDate; ?>" readonly/></td>
+		  <td bgcolor="antiquewhite"><input type="text" name="postDate" value="<?php echo $postDate; ?>" readonly/></td>
 		</tr>
         <tr>
 		  <th>dueDate</th>
-		  <td bgcolor="#FFFFFF"><input type="text" name="dueDate" value="<?php echo $dueDate; ?>" /></td></td>
+		  <td bgcolor="antiquewhite"><input type="text" name="dueDate" value="<?php echo $dueDate; ?>" /></td></td>
 		</tr>
         <tr>
 		  <th>text</th>
-		  <td bgcolor="#FFFFFF"><textarea name="text" style="width: 100%; height: 200px; resize: none; padding: 5px; box-sizing: border-box;"><?php echo $test;?></textarea></td>
+		  <td bgcolor="antiquewhite"><textarea name="text" style="width: 100%; height: 200px; resize: none; padding: 5px; box-sizing: border-box;"><?php echo $test;?></textarea></td>
 		</tr>
         <tr>
 		  <th>tag</th>
-		  <td bgcolor="#FFFFFF"><input type="text" name="taq" value="<?php echo $taq; ?>" /></td></td>
+		  <td bgcolor="antiquewhite"><input type="text" name="taq" value="<?php echo $taq; ?>" /></td></td>
 		</tr>
 		<tr>
 		  <th colspan="2">

@@ -1,8 +1,16 @@
 <html>
 <head>
-	<title>管理系統</title>
+	<title>媒體管理系統</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 </head>
+<style>
+  body{
+        width: 100%;
+        height: 100%;
+        background-color: antiquewhite;
+        text-align:center;
+    }
+</style>
 <script>
 	document.addEventListener('DOMContentLoaded', function() {
         var deleteLinks = document.querySelectorAll('.delete-link');
@@ -17,6 +25,10 @@
     });
 </script>
 <body>
+<div id="banner" class="banner" style="background-color:brown;">
+			<p style="color: white; font-size: large;font-weight: bolder">三校資工圖書系統
+</div>
+<h3 align="center" style="color:brown">修改資料</h3>
 <?php
         $conn=require_once "db_info.php";
         $mediaID=$_GET["id"];
@@ -30,28 +42,28 @@
         $language = $row['language'];
         $state = $row['state'];
 ?>
-	<h1 align="center">修改資料</h1>
+	
 	<form action="run_updatemedia.php" method="post">	
 	  <table width="500" border="1" bgcolor="#cccccc" align="center">
 		<tr>
 			<th>mediaID</th>
-			<td bgcolor="#FFFFFF"><input type="text" name="mediaID" value="<?php echo $mediaID;?>" readonly/></td>
+			<td bgcolor="antiquewhite"><input type="text" name="mediaID" value="<?php echo $mediaID;?>" readonly/></td>
 		</tr>
 		<tr>
 		  <th>title</th>
-		  <td bgcolor="#FFFFFF"><input type="text" name="title" value="<?php echo $title;?>" /></td>
+		  <td bgcolor="antiquewhite"><input type="text" name="title" value="<?php echo $title;?>" /></td>
 		</tr>
 		<tr>
 		  <th>company</th>
-		  <td bgcolor="#FFFFFF"><input type="text" name="company" value="<?php echo $company;?>" /></td>
+		  <td bgcolor="antiquewhite"><input type="text" name="company" value="<?php echo $company;?>" /></td>
 		</tr>
         <tr>
 		  <th>publishDate</th>
-		  <td bgcolor="#FFFFFF"><input type="text" name="publishDate" value="<?php echo $publishDate;?>" /></td>
+		  <td bgcolor="antiquewhite"><input type="text" name="publishDate" value="<?php echo $publishDate;?>" /></td>
 		</tr>
         <tr>
 		  <th>subjecthead</th>
-		  <td bgcolor='#FFFFFF'>
+		  <td bgcolor='antiquewhite'>
             <input type='radio' name='subjecthead' value='Computer Science' <?php if($subjecthead=='Computer Science'){echo "checked";} ?> >Computer Science</input>
             <input type='radio' name='subjecthead' value='Data Structures' <?php if($subjecthead=='Data Structures'){echo "checked";} ?> >Data Structures</input><br>
             <input type='radio' name='subjecthead' value='Java Programming' <?php if($subjecthead=='Java Programming'){echo "checked";} ?> >Java Programming</input>
@@ -66,14 +78,14 @@
 		</tr>
     <tr>
 		  <th>language</th>
-		  <td bgcolor='#FFFFFF'>
+		  <td bgcolor='antiquewhite'>
           <input type='radio' name='language' value='Chinese' <?php if($language=='Chinese'){echo "checked";} ?>>Chinese</input> 
 		  <input type='radio' name='language' value='English' <?php if($language=='English'){echo "checked";} ?>>English</input>
       </td>
 		</tr>
 		<tr>
 		  <th>state</th>
-			<td bgcolor='#FFFFFF'>
+			<td bgcolor='antiquewhite'>
             <input type='radio' name='state' value='Available' <?php if($state=='Available'){echo "checked";} ?>>Available </input> 
             <input type='radio' name='state' value='miss' <?php if($state=='miss'){echo "checked";}?>>miss </input>
       </td>
@@ -82,7 +94,7 @@
 		</tr>
 	  </table>
 	<br>
-    <h1 align="center">修改地點</h1>
+  <h3 align="center" style="color:brown">修改權限</h3>
 	<table style="width:50%" align="center">
 		<tr><th>librarymediaID</th><th>mediaID</th><th>Lname</th><th>number</th></tr>
 		<?php   
@@ -95,10 +107,10 @@
                         $Lname = $row2['Lname'];
                         $number = $row2['number'];
 						echo "<tr>";
-                        echo "<td bgcolor='#FFFFFF'><input type='text' name='id[$count]' value='$librarymediaID' readonly/></td>";
-						echo "<td bgcolor='#FFFFFF'><input type='text' name='mediaIDplace[$count]' value='$mediaID' readonly/></td>";
-						echo "<td bgcolor='#FFFFFF'><input type='text' name='Lname[$count]' value='$Lname'/></td>";
-						echo "<td bgcolor='#FFFFFF'><input type='text' name='number[$count]' value='$number'/></td>";
+                        echo "<td bgcolor='antiquewhite'><input type='text' name='id[$count]' value='$librarymediaID' readonly/></td>";
+						echo "<td bgcolor='antiquewhite'><input type='text' name='mediaIDplace[$count]' value='$mediaID' readonly/></td>";
+						echo "<td bgcolor='antiquewhite'><input type='text' name='Lname[$count]' value='$Lname'/></td>";
+						echo "<td bgcolor='antiquewhite'><input type='text' name='number[$count]' value='$number'/></td>";
 						echo "</tr>";
                         $count++;
 					}

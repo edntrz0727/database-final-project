@@ -23,15 +23,15 @@
 	  <table width="500" border="1" bgcolor="#cccccc" align="center">
 		<tr>
 			<th>libraryID</th>
-			<td bgcolor="#FFFFFF"><input type="text" name="libraryID" value="<?php echo $_GET['libraryID']; ?>"/></td>
+			<td bgcolor="antiquewhite"><input type="text" name="libraryID" value="<?php echo $_GET['libraryID']; ?>"/></td>
 		</tr>
 		<tr>
 		  <th>librarianID</th>
-		  <td bgcolor="#FFFFFF"><input type="text" name="librarianID" value="<?php echo $librarianID?>" readonly /></td>
+		  <td bgcolor="antiquewhite"><input type="text" name="librarianID" value="<?php echo $librarianID?>" readonly /></td>
 		</tr>
 		 <tr>
 		  <th>equipID</th>
-		  <td bgcolor="#FFFFFF"><input type="text" name="equipID" value="" /></td>
+		  <td bgcolor="antiquewhite"><input type="text" name="equipID" value="" /></td>
 		</tr>
 		<tr>
 		  <th colspan="2"><input type="submit" value="新增" class="delete-link"/></th>

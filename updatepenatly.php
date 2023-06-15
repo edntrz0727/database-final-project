@@ -4,6 +4,12 @@
 <title>讀者管理系統</title>
 </head>
 <style>
+	body{
+        width: 100%;
+        height: 100%;
+        background-color: antiquewhite;
+        text-align:center;
+    }
 	table, th, td {
 	border: 1px solid black;
 	border-collapse: collapse;
@@ -18,6 +24,10 @@
     }
 </style>
 <body>
+<div id="banner" class="banner" style="background-color:brown;">
+			<p style="color: white; font-size: large;font-weight: bolder">三校資工圖書系統
+</div>
+<h3 align="center" style="color: brown;">修改罰款狀態</h3>
     <?php
         $conn=require_once "db_info.php";
         $penallyID=$_GET["id"];
@@ -29,28 +39,28 @@
         $detail = $row['detail'];
         $state = $row['state'];
     ?>
-<h1 align="center">修改罰則狀態</h1>
+
 	<form action="run_updatepenally.php" method="post">	
 	  <table width="500" border="1" bgcolor="#cccccc" align="center">
 		<tr>
 			<th>penallyID</th>
-			<td bgcolor="#FFFFFF"><input type="text" name="penallyID" value="<?php echo $penallyID; ?>" readonly/></td>
+			<td bgcolor="antiquewhite"><input type="text" name="penallyID" value="<?php echo $penallyID; ?>" readonly/></td>
 		</tr>
 		<tr>
 		  <th>librarianID</th>
-		  <td bgcolor="#FFFFFF"><input type="text" name="librarianID" value="<?php echo $librarianID; ?>" readonly/></td>
+		  <td bgcolor="antiquewhite"><input type="text" name="librarianID" value="<?php echo $librarianID; ?>" readonly/></td>
 		</tr>
 		 <tr>
 		  <th>libraryID</th>
-		  <td bgcolor="#FFFFFF"><input type="text" name="libraryID" value="<?php echo $libraryID; ?>" readonly/></td>
+		  <td bgcolor="antiquewhite"><input type="text" name="libraryID" value="<?php echo $libraryID; ?>" readonly/></td>
 		</tr>
 		<tr>
 		  <th>detail</th>
-		  <td bgcolor="#FFFFFF"><input type="text" name="detail" value="<?php echo $detail; ?>" /></td>
+		  <td bgcolor="antiquewhite"><input type="text" name="detail" value="<?php echo $detail; ?>" /></td>
 		</tr>
         <tr>
 		  <th>state</th>
-		  <td bgcolor="#FFFFFF">
+		  <td bgcolor="antiquewhite">
             <input type="radio" name="state" value="已交付" <?php if($state=="已交付"){echo "checked";} ?>/>已交付</input>
             <input type="radio" name="state" value="沒交付" <?php if($state=="沒交付"){echo "checked";} ?>/>沒交付</input>
           </td>

@@ -2,25 +2,26 @@
 <head>
 	<title>書籍管理</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	    <script src="https://kit.fontawesome.com/998bef7baf.js" crossorigin="anonymous"></script>
+        <style>
+            body{
+                width: 100%;
+                height: 100%;
+                background-color: antiquewhite;
+            }
+            table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            }
+            th, td {
+            padding: 5px;
+            text-align: left;    
+            }
+            .move{
+                display: flex;
+                justify-content: center;
+            }
+    </style>
 </head>
-<style>
-    body{
-        background-color: antiquewhite;
-    }
-	table, th, td {
-	border: 1px solid black;
-	border-collapse: collapse;
-	}
-	th, td {
-	padding: 5px;
-	text-align: left;    
-	}
-    .move{
-        display: flex;
-        justify-content: center;
-    }
-</style>
 <script>
 	document.addEventListener('DOMContentLoaded', function() {
         var deleteLinks = document.querySelectorAll('.delete-link');
@@ -35,12 +36,14 @@
     });
 </script>
 <body>
-	
+<div id="banner" class="banner" style="background-color:brown;">
+			<p style="color: white; font-size: large;font-weight: bolder;margin-left: 5%;">三校資工圖書系統
+		</div>
 	<h1 align="center">書籍管理系統</h1>
     <div align="center">
 		<form action="searchbook.php" method="post">
-			<input class="search-bar" type="text" name="search" placeholder="輸入尋找書籍關鍵字">
-			<button class="search-btn"><i class="fas fa-search"></button>
+			<input class="search-bar" type="text" name="search" placeholder="輸入尋找書籍關鍵字" style="width: 40%; height:5%;border:none">
+			<input type="submit" value="搜尋" style="border: none;color:brown;background-color:antiquewhite"/>
 			<input type="radio" name="type" value="ISBN" checked>ISBN</input>
             <input type="radio" name="type" value="title">tilte</input>
             <input type="radio" name="type" value="subjecthead">subjecthead</input>

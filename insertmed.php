@@ -23,23 +23,23 @@
 	  <table width="500" border="1" bgcolor="#cccccc" align="center">
 	  	<tr>
 		  <th>mediaID</th>
-		  <td bgcolor="#FFFFFF"><input type="text" name="mediaID" value="" placeholder="只有新增地點才要墳" /></td>
+		  <td bgcolor="antiquewhite"><input type="text" name="mediaID" value="" placeholder="只有新增地點才要墳" /></td>
 		</tr>
 		<tr>
 		  <th>title</th>
-		  <td bgcolor="#FFFFFF"><input type="text" name="title" value="" /></td>
+		  <td bgcolor="antiquewhite"><input type="text" name="title" value="" /></td>
 		</tr>
 		<tr>
 		  <th>company</th>
-		  <td bgcolor="#FFFFFF"><input type="text" name="company" value="" /></td>
+		  <td bgcolor="antiquewhite"><input type="text" name="company" value="" /></td>
 		</tr>
         <tr>
 		  <th>publishDate</th>
-		  <td bgcolor="#FFFFFF"><input type="text" name="publishDate" value="" /></td>
+		  <td bgcolor="antiquewhite"><input type="text" name="publishDate" value="" /></td>
 		</tr>
         <tr>
 		  <th>subjecthead</th>
-		  <td bgcolor='#FFFFFF'>
+		  <td bgcolor='antiquewhite'>
             <input type='radio' name='subjecthead' value='Computer Science'>Computer Science</input>
             <input type='radio' name='subjecthead' value='Data Structures'>Data Structures</input><br>
             <input type='radio' name='subjecthead' value='Java Programming'>Java Programming</input>
@@ -54,21 +54,21 @@
 		</tr>
     <tr>
 		  <th>language</th>
-		  <td bgcolor='#FFFFFF'>
+		  <td bgcolor='antiquewhite'>
           <input type='radio' name='language' value='Chinese'>Chinese</input> 
 			    <input type='radio' name='language' value='English'>English</input>
       </td>
 		</tr>
 		<tr>
 		  <th>state</th>
-			<td bgcolor='#FFFFFF'>
+			<td bgcolor='antiquewhite'>
           <input type='radio' name='state' value='Available'>Available </input> 
 			    <input type='radio' name='state' value='miss'>miss </input>
       </td>
 	  </tr>
 		 <tr>
 		  <th>Lname</th>
-        <td bgcolor='#FFFFFF'>
+        <td bgcolor='antiquewhite'>
           <?php
                 $conn=require_once "db_info.php";
                 $sql = "SELECT * FROM library";
@@ -84,7 +84,7 @@
 		</tr>
 		<tr>
 		  <th>number</th>
-		  <td bgcolor="#FFFFFF"><input type="text" name="number" value="" /></td>
+		  <td bgcolor="antiquewhite"><input type="text" name="number" value="" /></td>
 		</tr>
 		<tr>
 		  <th colspan="2"><input type="submit" value="新增" class="delete-link"/></th>

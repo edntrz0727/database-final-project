@@ -23,31 +23,31 @@
 	  <table width="500" border="1" bgcolor="#cccccc" align="center">
 	  	<tr>
 		  <th>databaseID</th>
-		  <td bgcolor="#FFFFFF"><input type="text" name="databaseID" value="" placeholder="只有新增地點才要墳" /></td>
+		  <td bgcolor="antiquewhite"><input type="text" name="databaseID" value="" placeholder="只有新增地點才要墳" /></td>
 		</tr>
 		<tr>
 		  <th>title</th>
-		  <td bgcolor="#FFFFFF"><input type="text" name="title" value="" /></td>
+		  <td bgcolor="antiquewhite"><input type="text" name="title" value="" /></td>
 		</tr>
         <tr>
 		  <th>company</th>
-		  <td bgcolor="#FFFFFF"><input type="text" name="company" value="" /></td>
+		  <td bgcolor="antiquewhite"><input type="text" name="company" value="" /></td>
 		</tr>
         <tr>
 		  <th>url</th>
-		  <td bgcolor='#FFFFFF'><input type="text" name="url" value="" /></td>
+		  <td bgcolor='antiquewhite'><input type="text" name="url" value="" /></td>
 		</tr>
         <tr>
 		  <th>year</th>
-		  <td bgcolor='#FFFFFF'><input type="text" name="year" value="" /></td>
+		  <td bgcolor='antiquewhite'><input type="text" name="year" value="" /></td>
 		</tr>
 		<tr>
 		  <th>description</th>
-			<td bgcolor='#FFFFFF'><textarea name="description" style="width: 100%; height: 200px; resize: none; padding: 5px; box-sizing: border-box;"></textarea></td>
+			<td bgcolor='antiquewhite'><textarea name="description" style="width: 100%; height: 200px; resize: none; padding: 5px; box-sizing: border-box;"></textarea></td>
 	    </tr>
 		 <tr>
 		  <th>Lname</th>
-        <td bgcolor='#FFFFFF'>
+        <td bgcolor='antiquewhite'>
           <?php
                 $conn=require_once "db_info.php";
                 $sql = "SELECT * FROM library";

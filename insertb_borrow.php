@@ -23,23 +23,23 @@
 	  <table width="500" border="1" bgcolor="#cccccc" align="center">
 		<tr>
 			<th>libraryID</th>
-			<td bgcolor="#FFFFFF"><input type="text" name="libraryID" value="<?php echo $libraryID; ?>" readonly/></td>
+			<td bgcolor="antiquewhite"><input type="text" name="libraryID" value="<?php echo $libraryID; ?>" readonly/></td>
 		</tr>
 		<tr>
 		  <th>librarianID</th>
-		  <td bgcolor="#FFFFFF"><input type="text" name="librarianID" value="<?php echo $librarianID?>" readonly/></td>
+		  <td bgcolor="antiquewhite"><input type="text" name="librarianID" value="<?php echo $librarianID?>" readonly/></td>
 		</tr>
 		 <tr>
 		  <th>ISBN</th>
-		  <td bgcolor="#FFFFFF"><input type="text" name="ISBN" value="" /></td>
+		  <td bgcolor="antiquewhite"><input type="text" name="ISBN" value="" /></td>
 		</tr>
 		<tr>
 		  <th>duedata</th>
-		  <td bgcolor="#FFFFFF"><input type="text" name="duedata" value="<?php echo date('Y-m-d');?>" readonly/></td>
+		  <td bgcolor="antiquewhite"><input type="text" name="duedata" value="<?php echo date('Y-m-d');?>" readonly/></td>
 		</tr>
         <tr>
 		  <th>borrowdate</th>
-		  <td bgcolor="#FFFFFF"><input type="text" name="borrowdate" value="<?php echo date('Y-m-d', strtotime('+30 days'));?>" readonly/></td>
+		  <td bgcolor="antiquewhite"><input type="text" name="borrowdate" value="<?php echo date('Y-m-d', strtotime('+30 days'));?>" readonly/></td>
 		</tr>
 		<tr>
 		  <th colspan="2"><input type="submit" value="新增" class="delete-link"/></th>

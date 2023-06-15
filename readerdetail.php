@@ -51,19 +51,19 @@
 	  <table width="500" border="1" bgcolor="#cccccc" align="center">
 		<tr>
 			<th>libraryID</th>
-			<td bgcolor="#FFFFFF"><input type="text" name="libraryID" value="<?php echo $libraryID; ?>" readonly/></td>
+			<td bgcolor="antiquewhite"><input type="text" name="libraryID" value="<?php echo $libraryID; ?>" readonly/></td>
 		</tr>
 		<tr>
 		  <th>studentID</th>
-		  <td bgcolor="#FFFFFF"><input type="text" name="studentID" value="<?php echo $studentID; ?>" /></td>
+		  <td bgcolor="antiquewhite"><input type="text" name="studentID" value="<?php echo $studentID; ?>" /></td>
 		</tr>
 		 <tr>
 		  <th>name</th>
-		  <td bgcolor="#FFFFFF"><input type="text" name="name" value="<?php echo $name; ?>" /></td>
+		  <td bgcolor="antiquewhite"><input type="text" name="name" value="<?php echo $name; ?>" /></td>
 		</tr>
 		<tr>
 		  <th>school</th>
-		  <td bgcolor="#FFFFFF">
+		  <td bgcolor="antiquewhite">
 			<input type="radio" name="school" value="ntu" <?php if($school=='ntu'){echo "checked";}?>>ntu</input>
 			<input type="radio" name="school" value="ntnu" <?php if($school=='ntnu'){echo "checked";}?>>ntnu</input>
 			<input type="radio" name="school" value="ntust" <?php if($school=='ntust'){echo "checked";}?>>ntust</input>
@@ -71,19 +71,19 @@
 		</tr>
         <tr>
 		  <th>password</th>
-		  <td bgcolor="#FFFFFF"><input type="text" name="password" value="<?php echo $password; ?>" /></td>
+		  <td bgcolor="antiquewhite"><input type="text" name="password" value="<?php echo $password; ?>" /></td>
 		</tr>
         <tr>
 		  <th>phone</th>
-		  <td bgcolor="#FFFFFF"><input type="text" name="phone" value="<?php echo $phone; ?>" /></td>
+		  <td bgcolor="antiquewhite"><input type="text" name="phone" value="<?php echo $phone; ?>" /></td>
 		</tr>
         <tr>
 		  <th>address</th>
-		  <td bgcolor="#FFFFFF"><input type="text" name="address" value="<?php echo $address; ?>" /></td>
+		  <td bgcolor="antiquewhite"><input type="text" name="address" value="<?php echo $address; ?>" /></td>
 		</tr>
         <tr>
 		  <th>email</th>
-          <td bgcolor="#FFFFFF"><input type="text" name="email" value="<?php echo $email; ?>" /></td> 
+          <td bgcolor="antiquewhite"><input type="text" name="email" value="<?php echo $email; ?>" /></td> 
         </td>
 		</tr>
 		<tr>

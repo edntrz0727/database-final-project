@@ -4,6 +4,12 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 </head>
 <style>
+    body{
+        width: 100%;
+        height: 100%;
+        background-color: antiquewhite;
+        text-align:center;
+    }
 	table, th, td {
 	border: 1px solid black;
 	border-collapse: collapse;
@@ -31,8 +37,11 @@
     });
 </script>
 <body>
+<div id="banner" class="banner" style="background-color:brown;">
+			<p style="color: white; font-size: large;font-weight: bolder">三校資工圖書系統
+</div>
 	<?php  $libraryID=$_GET['libraryID']; ?>
-	<h1 align="center">搜尋結果</h1>
+	<h3 align="center" style="color:brown">搜尋結果</h3>
     <div align="center">
 		<form action="searche_borrow.php??libraryID=<?php echo $libraryID;?>" method="post">
 			<input class="search-bar" type="text" name="search" placeholder="輸入尋找公告ID">

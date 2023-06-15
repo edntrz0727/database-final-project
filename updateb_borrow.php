@@ -1,9 +1,15 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>讀者管理系統</title>
+<title>書籍管理系統</title>
 </head>
 <style>
+  body{
+        width: 100%;
+        height: 100%;
+        background-color: antiquewhite;
+        text-align:center;
+    }
 	table, th, td {
 	border: 1px solid black;
 	border-collapse: collapse;
@@ -31,6 +37,9 @@
     });
 </script>
 <body>
+<div id="banner" class="banner" style="background-color:brown;">
+			<p style="color: white; font-size: large;font-weight: bolder">三校資工圖書系統
+</div>
     <?php
         $conn=require_once "db_info.php";
         $bbID=$_GET["id"];
@@ -42,28 +51,28 @@
         $ISBN = $row['ISBN'];
         $state = $row['state'];
     ?>
-<h1 align="center">修改借閱狀態</h1>
+<h3 align="center" style="color:brown">修改借閱狀態</h3>
 	<form action="run_updateb_borrow.php" method="post">	
 	  <table width="500" border="1" bgcolor="#cccccc" align="center">
 		<tr>
 			<th>bbID</th>
-			<td bgcolor="#FFFFFF"><input type="text" name="bbID" value="<?php echo $bbID; ?>" readonly/></td>
+			<td bgcolor="antiquewhite"><input type="text" name="bbID" value="<?php echo $bbID; ?>" readonly/></td>
 		</tr>
 		<tr>
 		  <th>librarianID</th>
-		  <td bgcolor="#FFFFFF"><input type="text" name="librarianID" value="<?php echo $librarianID; ?>" readonly/></td>
+		  <td bgcolor="antiquewhite"><input type="text" name="librarianID" value="<?php echo $librarianID; ?>" readonly/></td>
 		</tr>
 		 <tr>
 		  <th>libraryID</th>
-		  <td bgcolor="#FFFFFF"><input type="text" name="libraryID" value="<?php echo $libraryID; ?>" readonly/></td>
+		  <td bgcolor="antiquewhite"><input type="text" name="libraryID" value="<?php echo $libraryID; ?>" readonly/></td>
 		</tr>
 		<tr>
 		  <th>ISBN</th>
-		  <td bgcolor="#FFFFFF"><input type="text" name="ISBN" value="<?php echo $ISBN; ?>" readonly/></td>
+		  <td bgcolor="antiquewhite"><input type="text" name="ISBN" value="<?php echo $ISBN; ?>" readonly/></td>
 		</tr>
         <tr>
 		  <th>state</th>
-		  <td bgcolor="#FFFFFF">
+		  <td bgcolor="antiquewhitewhite">
             <input type="radio" name="state" value="借閱中" <?php if($state=="借閱中"){echo "checked";} ?>/>借閱中</input>
             <input type="radio" name="state" value="已過期" <?php if($state=="已過期"){echo "checked";} ?>/>已過期</input>
             <input type="radio" name="state" value="已還書" <?php if($state=="已還書"){echo "checked";} ?>/>已還書</input>

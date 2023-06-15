@@ -1,8 +1,16 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>學生資料庫管理系統</title>
+<title>書籍管理系統</title>
 </head>
+<style>
+    body{
+        width: 100%;
+        height: 100%;
+        background-color: antiquewhite;
+        text-align:center;
+    }
+    </style>
 <script>
 	document.addEventListener('DOMContentLoaded', function() {
         var deleteLinks = document.querySelectorAll('.delete-link');
@@ -17,6 +25,9 @@
     });
 </script>
 <body>
+<div id="banner" class="banner" style="background-color:brown;">
+			<p style="color: white; font-size: large;font-weight: bolder">三校資工圖書系統
+</div>
     <?php
         $conn=require_once "db_info.php";
         $ISBN=$_GET["id"];
@@ -34,40 +45,40 @@
         $language = $row['language'];
         $state = $row['state'];
     ?>
-<h1 align="center">修改書籍資料</h1>
+<h3 align="center" style="color:brown">修改書籍資料</h3>
 	<form action="run_updatebook.php" method="post">	
 	  <table width="500" border="1" bgcolor="#cccccc" align="center">
 		<tr>
 			<th>ISBN</th>
-			<td bgcolor="#FFFFFF"><input type="text" name="ISBN" value="<?php echo $ISBN; ?>" readonly/></td>
+			<td bgcolor="antiquewhite"><input type="text" name="ISBN" value="<?php echo $ISBN; ?>" readonly/></td>
 		</tr>
 		<tr>
 		  <th>title</th>
-		  <td bgcolor="#FFFFFF"><input type="text" name="title" value="<?php echo $title; ?>" /></td>
+		  <td bgcolor="antiquewhite"><input type="text" name="title" value="<?php echo $title; ?>" /></td>
 		</tr>
 		 <tr>
 		  <th>writer</th>
-		  <td bgcolor="#FFFFFF"><input type="text" name="writer" value="<?php echo $writer; ?>" /></td>
+		  <td bgcolor="antiquewhite"><input type="text" name="writer" value="<?php echo $writer; ?>" /></td>
 		</tr>
 		<tr>
 		  <th>company</th>
-		  <td bgcolor="#FFFFFF"><input type="text" name="company" value="<?php echo $company; ?>" /></td>
+		  <td bgcolor="antiquewhite"><input type="text" name="company" value="<?php echo $company; ?>" /></td>
 		</tr>
         <tr>
 		  <th>translator</th>
-		  <td bgcolor="#FFFFFF"><input type="text" name="translator" value="<?php if($translator==''){echo 0;}else{echo $translator;} ?>" /></td>
+		  <td bgcolor="antiquewhite"><input type="text" name="translator" value="<?php if($translator==''){echo 0;}else{echo $translator;} ?>" /></td>
 		</tr>
         <tr>
 		  <th>publishDate</th>
-		  <td bgcolor="#FFFFFF"><input type="text" name="publishDate" value="<?php echo $publishDate; ?>" /></td>
+		  <td bgcolor="antiquewhite"><input type="text" name="publishDate" value="<?php echo $publishDate; ?>" /></td>
 		</tr>
         <tr>
 		  <th>edition</th>
-		  <td bgcolor="#FFFFFF"><input type="text" name="edition" value="<?php echo $edition; ?>" /></td>
+		  <td bgcolor="antiquewhite"><input type="text" name="edition" value="<?php echo $edition; ?>" /></td>
 		</tr>
         <tr>
 		  <th>subjecthead</th>
-		  <td bgcolor='#FFFFFF'>
+		  <td bgcolor='antiquewhite'>
             <input type='radio' name='subjecthead' value='Algorithms' <?php if($subjecthead=="Algorithms"){echo "checked";}?> >Algorithms</input> 
 			      <input type='radio' name='subjecthead' value='Amazon Web Services' <?php if($subjecthead=="Amazon Web Services"){echo "checked";}?>>Amazon Web Services</input><br>
             <input type='radio' name='subjecthead' value='Artificial Intelligence' <?php if($subjecthead=="Artificial Intelligence"){echo "checked";}?> >Artificial Intelligence</input> 
@@ -99,14 +110,14 @@
 		</tr>
     <tr>
 		  <th>language</th>
-		  <td bgcolor='#FFFFFF'>
+		  <td bgcolor='antiquewhite'>
           <input type='radio' name='language' value='Chinese' <?php if($language=="Chinese"){echo "checked";}?> >Chinese</input> 
 			    <input type='radio' name='language' value='English' <?php if($language=="English"){echo "checked";}?>>English</input>
       </td>
 		</tr>
 		<tr>
 		  <th>state</th>
-			<td bgcolor='#FFFFFF'>
+			<td bgcolor='antiquewhite'>
           <input type='radio' name='state' value='空閒' <?php if($state=="空閒"){echo "checked";}?> >空閒</input> 
 			    <input type='radio' name='state' value='遺失' <?php if($state=="遺失"){echo "checked";}?>>遺失/沒還</input>
           <input type='radio' name='state' value='預約中' <?php if($state=="預約中"){echo "checked";}?>>預約中</input>
@@ -117,7 +128,7 @@
 		</tr>
     </table>
     <br>
-    <h1 align="center">修改地點</h1>
+    <h3 align="center" style="color:brown">修改地點</h3>
 	  <table style="width:50%" align="center">
 		<tr><th>ISBN</th><th>bookID</th><th>Lname</th><th>number</th></tr>
 		<?php   
@@ -130,10 +141,10 @@
              $Lname = $row2['Lname'];
             $number = $row2['number'];
 						echo "<tr>";
-            echo "<td bgcolor='#FFFFFF'><input type='text' name='id[$count]' value='$ISBN' readonly/></td>";
-						echo "<td bgcolor='#FFFFFF'><input type='text' name='bookID[$count]' value='$bookID' readonly/></td>";
-						echo "<td bgcolor='#FFFFFF'><input type='text' name='Lname[$count]' value='$Lname'/></td>";
-						echo "<td bgcolor='#FFFFFF'><input type='text' name='number[$count]' value='$number'/></td>";
+            echo "<td bgcolor='antiquewhite'><input type='text' name='id[$count]' value='$ISBN' readonly/></td>";
+						echo "<td bgcolor='antiquewhite'><input type='text' name='bookID[$count]' value='$bookID' readonly/></td>";
+						echo "<td bgcolor='antiquewhite'><input type='text' name='Lname[$count]' value='$Lname'/></td>";
+						echo "<td bgcolor='antiquewhitewhite'><input type='text' name='number[$count]' value='$number'/></td>";
 						echo "</tr>";
             $count++;
 					}

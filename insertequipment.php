@@ -36,11 +36,11 @@
 	  <table width="500" border="1" bgcolor="#cccccc" align="center">
 		<tr>
 		  <th>name</th>
-		  <td bgcolor="#FFFFFF"><input type="text" name="name" value="" /></td>
+		  <td bgcolor="antiquewhite"><input type="text" name="name" value="" /></td>
 		</tr>
 		 <tr>
 		  <th>Lname</th>
-        <td bgcolor='#FFFFFF'>
+        <td bgcolor='antiquewhite'>
           <?php
                 $conn=require_once "db_info.php";
                 $sql = "SELECT * FROM library";
@@ -56,7 +56,7 @@
 		</tr>
         <tr>
 		  <th>state</th>
-		  <td bgcolor="#FFFFFF">
+		  <td bgcolor="antiquewhite">
             <input type="radio" name="state" value="空閒"/>空閒</input>
             <input type="radio" name="state" value="使用中"/>使用中</input>
             <input type="radio" name="state" value="已預約"/>已預約</input>

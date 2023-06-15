@@ -4,6 +4,12 @@
 <title>DB管理系統</title> <!-- mysql 自動化同步預約-->
 </head>
 <style>
+    body{
+        width: 100%;
+        height: 100%;
+        background-color: antiquewhite;
+        text-align:center;
+    }
 	table, th, td {
 	border: 1px solid black;
 	border-collapse: collapse;
@@ -31,6 +37,9 @@
     });
 </script>
 <body>
+<div id="banner" class="banner" style="background-color:brown;">
+			<p style="color: white; font-size: large;font-weight: bolder">三校資工圖書系統
+</div>
     <?php
         $conn=require_once "db_info.php";
         $buyID=$_GET["id"];
@@ -40,20 +49,20 @@
         $databaseID = $row['databaseID'];
         $Lname = $row['Lname'];
     ?>
-<h1 align="center">修改地點</h1>
+<h3 align="center" style="color:brown">修改地點</h3>
 	<form action="run_updatebuy.php" method="post">	
 	  <table width="500" border="1" bgcolor="#cccccc" align="center">
 		<tr>
 			<th>buyID</th>
-			<td bgcolor="#FFFFFF"><input type="text" name="buyID" value="<?php echo $buyID; ?>" readonly/></td>
+			<td bgcolor="antiquewhite"><input type="text" name="buyID" value="<?php echo $buyID; ?>" readonly/></td>
 		</tr>
 		<tr>
 		  <th>databaseID</th>
-		  <td bgcolor="#FFFFFF"><input type="text" name="databaseID" value="<?php echo $databaseID; ?>" readony/></td>
+		  <td bgcolor="antiquewhite"><input type="text" name="databaseID" value="<?php echo $databaseID; ?>" readony/></td>
 		</tr>
 		 <tr>
 		  <th>Lname</th>
-		  <td bgcolor="#FFFFFF">
+		  <td bgcolor="antiquewhite">
           <?php
             $sql2 = "SELECT * FROM library";
             $result2 = mysqli_query($conn, $sql2);

@@ -2,6 +2,14 @@
 <head>
 	<title>學生資料庫管理系統</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<style>
+			body{
+                width: 100%;
+                height: 100%;
+                background-color: antiquewhite;
+				text-align: center;
+            }
+		</style>
 </head>
 <script>
 	document.addEventListener('DOMContentLoaded', function() {
@@ -17,41 +25,43 @@
     });
 </script>
 <body>
-	
-	<h1 align="center">新增書籍資料</h1>
+	<div id="banner" class="banner" style="background-color:brown;">
+				<p style="color: white; font-size: large;font-weight: bolder;">三校資工圖書系統
+	</div>
+	<h2 align="center" style="color:brown">新增書籍資料</h2>
 	<form action="insertbook.php" method="post">	
-	  <table width="500" border="1" bgcolor="#cccccc" align="center">
+	  <table width="500" border="1px" bgcolor="antiquewhite" align="center">
 		<tr>
 			<th>ISBN</th>
-			<td bgcolor="#FFFFFF"><input type="text" name="ISBN" value=""/></td>
+			<td bgcolor="antiquewhite"><input type="text" name="ISBN" value=""/></td>
 		</tr>
 		<tr>
 		  <th>title</th>
-		  <td bgcolor="#FFFFFF"><input type="text" name="title" value="" /></td>
+		  <td bgcolor="antiquewhite"><input type="text" name="title" value="" /></td>
 		</tr>
 		 <tr>
 		  <th>writer</th>
-		  <td bgcolor="#FFFFFF"><input type="text" name="writer" value="" /></td>
+		  <td bgcolor="antiquewhite"><input type="text" name="writer" value="" /></td>
 		</tr>
 		<tr>
 		  <th>company</th>
-		  <td bgcolor="#FFFFFF"><input type="text" name="company" value="" /></td>
+		  <td bgcolor="antiquewhite"><input type="text" name="company" value="" /></td>
 		</tr>
         <tr>
 		  <th>translator</th>
-		  <td bgcolor="#FFFFFF"><input type="text" name="translator" value="" /></td>
+		  <td bgcolor="antiquewhite"><input type="text" name="translator" value="" /></td>
 		</tr>
         <tr>
 		  <th>publishDate</th>
-		  <td bgcolor="#FFFFFF"><input type="text" name="publishDate" value="" /></td>
+		  <td bgcolor="antiquewhite"><input type="text" name="publishDate" value="" /></td>
 		</tr>
         <tr>
 		  <th>edition</th>
-		  <td bgcolor="#FFFFFF"><input type="text" name="edition" value="" /></td>
+		  <td bgcolor="antiquewhite"><input type="text" name="edition" value="" /></td>
 		</tr>
         <tr>
 		  <th>subjecthead</th>
-		  <td bgcolor='#FFFFFF'>
+		  <td bgcolor='antiquewhite'>
             <input type='radio' name='subjecthead' value='Algorithms'>Algorithms</input> 
 			<input type='radio' name='subjecthead' value='Amazon Web Services'>Amazon Web Services</input><br>
 			<input type='radio' name='subjecthead' value='Artificial Intelligence'>Artificial Intelligence</input> 
@@ -83,14 +93,14 @@
 		</tr>
     <tr>
 		  <th>language</th>
-		  <td bgcolor='#FFFFFF'>
+		  <td bgcolor='antiquewhite'>
           <input type='radio' name='language' value='Chinese'>Chinese</input> 
 			    <input type='radio' name='language' value='English'>English</input>
       </td>
 		</tr>
 		<tr>
 		  <th>state</th>
-			<td bgcolor='#FFFFFF'>
+			<td bgcolor='antiquewhite'>
           		<input type='radio' name='state' value='空閒'>空閒</input> 
 			    <input type='radio' name='state' value='遺失'>遺失/沒還</input>
 				<input type='radio' name='state' value='預約中'>預約中</input>
@@ -99,7 +109,7 @@
 	  <tr>
 	  <tr>
 		<th>Lname</th>
-        <td bgcolor='#FFFFFF'>
+        <td bgcolor='antiquewhite'>
           <?php
                 $conn=require_once "db_info.php";
                 $sql = "SELECT * FROM library";
@@ -115,10 +125,10 @@
 		</tr>
 		<tr>
 		  <th>number</th>
-		  <td bgcolor="#FFFFFF"><input type="text" name="number" value="" /></td>
+		  <td bgcolor="antiquewhite"><input type="text" name="number" value="" /></td>
 		</tr>
 		<tr>
-		  <th colspan="2"><input type="submit" value="新增" class="delete-link"/></th>
+		  <th colspan="2"><input type="submit" value="新增" class="delete-link" style="background-color: antiquewhite; border:none;color:brown"/></th>
 		</tr>
 	  </table>
 	</form>
