@@ -98,9 +98,12 @@
             </form>
         </div>
         <div>
-            <form action="" method="post"><!--送出預約-->
-                <input type="submit" value="預約" />
-            </form>
+            <?php
+                echo '<a href="book_reserve.php?id='.$ISBN.'" method="get"><!--送出預約-->
+                        <input type="submit" value="預約" />
+                    </form>'
+            ?>
+            
         </div>
     </body>
 </html>
