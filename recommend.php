@@ -26,7 +26,7 @@ if (isset($_POST['book_name']) && isset($_POST['author']) && isset($_POST['ISBN'
 	
     $result = $conn->query($sql);
 	if ($result) {
-        echo "送出成功!";
+        echo "送出成功!<br> <a href='user_index.php'>返回首頁</a>";
 	} else {
         echo "送出失敗";
 	}
