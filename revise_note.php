@@ -17,7 +17,7 @@ if (isset($_POST['note_name']) && isset($_POST['note_info']) ) {
 	if ($conn->query($update_sql) === TRUE) {
 		echo "修改成功!!<br> <a href='read_history.php'>返回閱讀清單</a>";
 	} else {
-		echo "<h2 align='center'><font color='antiquewith'>修改失敗!!</font></h2>";
+		echo "<h2 align='center'><font color='antiquewhite'>修改失敗!!</font></h2>";
 
 	}
 
