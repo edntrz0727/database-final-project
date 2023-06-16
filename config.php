@@ -2,8 +2,8 @@
     // ******** update your personal settings ******** 
 $servername = "localhost";
 $username = "root";
-$password = "40947018S";
-$dbname = "lib_proj";
+$password = "";
+$dbname = "";
 
 // Connecting to and selecting a MySQL database
 $conn = new mysqli($servername, $username, $password, $dbname);
