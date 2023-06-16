@@ -26,16 +26,6 @@
     }
     </style>
 </head>
-<style>
-	table, th, td {
-	border: 1px solid black;
-	border-collapse: collapse;
-	}
-	th, td {
-	padding: 5px;
-	text-align: left;    
-	}
-</style>
 <body>
         <div id="banner" class="banner" style="background-color:brown;">
 			<p style="color: white; font-size: large;font-weight: bolder;margin-left: 5%;">三校資工圖書系統
