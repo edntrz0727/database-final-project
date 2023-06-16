@@ -1,4 +1,4 @@
-/*DELIMITER //
+DELIMITER //
 
 CREATE TRIGGER before_insert_recommend
 BEFORE INSERT ON RECOMMEND
@@ -64,7 +64,7 @@ BEGIN
 
 END //
 
-DELIMITER ;*/
+DELIMITER ;
 
 -- 新增筆記
 DELIMITER //
