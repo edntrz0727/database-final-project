@@ -32,6 +32,9 @@ VALUES ("ntust0010","41190123S","Ava","ntust","78901234","0987654321","ntustdrom
 INSERT INTO `reader`(`libraryID`, `studentID`, `name`, `school`, `password`, `phone`, `address`, `email`) 
 VALUES ("ntu0011","41201234S","Liam","ntu","89012345","0912345678","ntudrom10","41201234S@gapps.ntu.edu.tw");
 
+INSERT INTO `READER` (`libraryID`, `studentID`, `name`, `school`, `password`,  `phone`, `address`, `email`) VALUES
+	("1111111", "4056951D", "tom", "NTNU", "123456", "0984521", "123456", "123@123");
+
 
 /* librarian */
 
@@ -143,6 +146,7 @@ INSERT INTO `equipment`(`equipID`, `name`, `Lname`, `state`) VALUES ('e1','台�
 INSERT INTO `equipment`(`equipID`, `name`, `Lname`, `state`) VALUES ('e2','台科大自修室','ntust圖書館','空閒');
 INSERT INTO `equipment`(`equipID`, `name`, `Lname`, `state`) VALUES ('e3','台師大本部自修室','ntnu大安圖書館','空閒');
 INSERT INTO `equipment`(`equipID`, `name`, `Lname`, `state`) VALUES ('e4','台師大公館自修室','ntnu公館圖書館','空閒');
+INSERT INTO `EQUIPMENT` (`equipID`, `name`, `Lname`, `state`) VALUES ("56456", "roomA", "GongGuan", "空閒");
 
 /* recommand */
 
@@ -226,3 +230,9 @@ INSERT INTO `m_borrow`(`mbID`, `libraryID`, `librarianID`, `mediaID`, `state`) V
 
 INSERT INTO `media_place`(`librarymediaID`, `mediaID`, `Lname`, `number`) VALUES ('mp0001','m0001','ntnu大安圖書館',10);
 INSERT INTO `media_place`(`librarymediaID`,`mediaID`, `Lname`, `number`) VALUES ('mp0002', 'm0001','ntu圖書館',10);
+
+
+INSERT INTO `LIBRARY` (`Lname`, `school`, `address`, `phone`, `url`) VALUES
+	("Gongguan", "NTNU", "AAABBB", "0277495687", "www.ntnu.edu.tw");
+
+
