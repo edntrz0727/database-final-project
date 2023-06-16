@@ -46,7 +46,7 @@
         </div>
         <p style="color: brown;font-weight: bold;margin-top: 2%;font-size: large;text-align: center;">搜尋結果</p>
         <form action="" method="get">
-            <table style="margin-top: 1%;margin-left: 40%;">
+            <table style="margin-top: 1%;margin-left: 20%;">
                 <tr>
                 <tr><th>書名</th><th>作者</th><th>出版日期</th><th colspan="2">館藏頁面</th></tr>
                 <?php
@@ -71,8 +71,8 @@
 
                     $sql = "SELECT title, writer, publishDate, ISBN
                             FROM BOOK
-                            WHERE title like '%$title%' or writer like '%$writer%' or ISBN like '%$ISBN%' or company like '%$company%' or translator like '%$translator%' or 
-                            publishDate like '%$publishDate%' or edition like '%$edition%' or subjecthead like  '%$subjecthead%' or language like '%$language%'";
+                            WHERE title = '$title' or writer = '$writer' or ISBN = '$ISBN' or company = '$company' or translator = '$translator' or 
+                            publishDate = '$publishDate' or edition = '$edition' or subjecthead = '$subjecthead' or language = '$language'";
                     
                     $result = $conn->query($sql);
                     if ($result->num_rows > 0) {	
@@ -98,7 +98,9 @@
                 </tr>
             </table>
         </form>
-		
+		<div class="btn" style="text-align: center;margin-top: 2%;">
+            <input type="button" value="返回首頁" onclick="javascript:location.href='user_index.php'" style=" background-color: antiquewhite;color: brown;border: none;"/>
+        </div>
 
 </body>
 </html>

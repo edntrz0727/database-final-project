@@ -46,7 +46,8 @@
         </div>
         <p style="color: brown;font-weight: bold;margin-top: 2%;font-size: large;text-align: center;">搜尋結果</p>
         <form action="" method="get">
-            <table style="margin-top: 1%;margin-left: 40%;">
+            <p style="color: brown;font-weight: bold;margin-top: 2%;font-size: medium;text-align: center;">書籍</p>
+            <table style="margin-top: 1%;margin-left: 20%;">
                 <tr>
                 <tr><th>書名</th><th>作者</th><th>出版日期</th><th colspan="2">館藏頁面</th></tr>
                 <?php
@@ -84,23 +85,8 @@
                                 '<td><a href="collection_info.php?id='.$row['ISBN'].'">查看</td>'.
                             '</tr>';
                         }
-                    }
-
-                    $sql = "SELECT title, publishDate, journaID
-                            FROM JOURNAL
-                            WHERE title like '%$title%' or publishDate like '%$publishDate%'";
-                    
-                    $result = $conn->query($sql);
-                    if ($result->num_rows > 0) {	
-                        while ( $row = mysqli_fetch_array ( $result, MYSQLI_ASSOC ) ) {
-                            // Process the Result here , need to modify.
-                            echo'<tr>'.
-                                '<td>'.$row['title'].'</td>'.
-                                '<td>     </td>'.
-                                '<td>'.$row['publishDate'].'</td>'.
-                                '<td><a href="collection_info.php?id='.$row['journaID'].'">查看</td>'.
-                            '</tr>';
-                        }
+                    }else{
+                        echo "查無資料";
                     }
 
                 }else{
@@ -109,8 +95,45 @@
                 }
                                 
                 ?>
-                </tr>
-                
+            </tr>
+            </table>
+            <p style="color: brown;font-weight: bold;margin-top: 2%;font-size: medium;text-align: center;">期刊</p>
+            <table style="margin-top: 1%;margin-left: 20%;">
+                <tr>
+                <tr><th>期刊名</th><th>出刊頻率</th><th>出版日期</th><th colspan="2">館藏頁面</th></tr>
+                <?php
+
+                session_start();
+
+                if (isset($_POST['search']) ) {
+                    $search = $_POST['search'];
+
+                    $j_sql = "SELECT *
+                            FROM JOURNAL
+                            WHERE title like '%$search%' ";
+                    
+                    $result = $conn->query($j_sql);
+                    if ($result->num_rows > 0) {	
+                        while ( $row = mysqli_fetch_array ( $result, MYSQLI_ASSOC ) ) {
+                            // Process the Result here , need to modify.
+                            echo'<tr>'.
+                                '<td>'.$row['title'].'</td>'.
+                                '<td>'.$row['frequency'].'</td>'.
+                                '<td>'.$row['publishDate'].'</td>'.
+                                '<td><a href="collection_info.php?id='.$row['journalID'].'">查看</td>'.
+                            '</tr>';
+                        }
+                    }else{
+                        echo "查無資料";
+                    }
+
+                }else{
+                    // 跳到失敗頁面
+                    echo "資料不完整";
+                }
+                                
+                ?>
+            </tr>
             </table>
             <div class="btn" style="text-align: center;margin-top: 2%;">
                 <input type="button" value="返回首頁" onclick="javascript:location.href='user_index.php'" style=" background-color: antiquewhite;color: brown;border: none;"/>
